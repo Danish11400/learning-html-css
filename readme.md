@@ -193,7 +193,7 @@ __hey if i make all sepertely type name and placeholder i got__
 2. range 
  - when we put range inside attribute the input tag a line appers on webpage which can be controlled by attributes of min and max like how much range it should be have eg.
 
-   ```<form action="google.com">``
+   ```<form action="google.com">```
       ``` <input type="range" min="0" max="18" step="3" name="habibi">```
        ```<button>press</button>```
        ```</form>```
