@@ -75,7 +75,7 @@ input text.
 
 - BUT WHERE IT SEND OUR DATA?
 
-- we read one attribute with form element called (method) eg. 
+- we read one attribute with form element called (action) eg. 
 
 ```<form action="login">```
 ```<button>press me</button>```
