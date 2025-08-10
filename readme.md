@@ -77,24 +77,24 @@ input text.
 
 - we read one attribute with form element called (method) eg. 
 
-```<form method="login">
+```<form action="login">
 <button>press me</button> 
  <input type="text">
 
 <form>```
-- here what we did we put method attribute in form element on pressing button form trys
-to send our data of input text to some where and method attribute told form element
+- here what we did we put action attribute in form element on pressing button form trys
+to send our data of input text to some where and action attribute told form element
 where to send data eg. here we put login eg. we created a login page in backend then type here login method attribute told form send data to login page
 
-- we can put anything in method attribute eg.
+- we can put anything in action attribute eg.
 
-```<form method="https://google.com">
+```<form action="https://google.com">
 <button>press me</button> 
  <input type="text">
 <form>```
-  - here method told foem element send data to google.com.
+  - here action told form element send data to google.com.
 
-  - and sir tell us about get attribute that tells form element how to send data 
+  - and sir tell us about method="get" attribute that tells form element how to send data 
   but sir told we learn it later
 
  ## TOPIC3 name and place holder attribute
