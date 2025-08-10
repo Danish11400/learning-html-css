@@ -62,11 +62,11 @@ buttons tag its not important.
 
 - we learn about form element form element send our data to somewhere
 - eg.
-```<form>
-<button>press me</button> 
- <input type="text">
+```<form>```
+```<button>press me</button>```
+ ```<input type="text">```
 
-<form>```
+```<form>```
 
 
 - here it make input text and button in form element
@@ -174,6 +174,16 @@ __hey if i make all sepertely type name and placeholder i got__
 -and (email where can cant go with writting ....@something)
 
 **except required every input box needs (attribute type="")
+
+## Topic6 checkbox text areas and range inputs
+
+- checkboxes are the area where u put a box on the page 
+- in rows amd colums
+``` <form action="">
+        <textarea rows="10" cols="10"></textarea>
+     </form>```
+    - rows and cols are attributes
+    you get the result like in below mentioned image
 
 
 
