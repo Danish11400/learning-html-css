@@ -228,7 +228,7 @@ __hey if i make all sepertely type name and placeholder i got__
 - and value attribution
 - eg
 ``` <form>```
-      ``` <label for="pant size">select ur pant size</label>```
+      ```<label for="pant size">select ur pant size</label>```
     ``` <select name="pant and west size" id="pant size">```
    ``` <option value="size 22 to 28">small</option>```
     ```<option value="size 28 to 36">medium</option>```
