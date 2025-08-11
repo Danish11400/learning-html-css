@@ -375,3 +375,135 @@ green tea	      $0.98	     transparent	 reduces cholestrol
 * in short sematic elements tells coder or screen reader wha this part contains *
 
 
+## chapter 6 basic css
+
+# inline style
+- basically in inline style we can style only one thing it can be anything paragraph div etc etc mens in that line we put that style (in the line we put attributioj style and then we can style that one particular thing) eg.
+
+```
+    <h1 style="color: brown;">THE LEGENDARY AK-47</h1>
+    <p style="color:gold;">
+        The <a href="https://www.istockphoto.com/photos/ak-47">AK-47</a>, officially known as the Avtomat Kalashnikova, is one of the most iconic and widely used assault rifles in the world. It was developed in the <a href="https://en.wikipedia.org/wiki/Soviet_Union">Soviet Union</a> by  <a href="https://www.gettyimages.in/photos/mikhail-kalashnikov">Mikhail Kalashnikov</a> and officially adopted by the Red Army in 1949. Renowned for its durability, simplicity, and low production cost, the AK-47 has become a symbol of both military power and revolutionary struggle. Its gas-operated, 7.62×39mm cartridge system allows it to function reliably in harsh conditions, including mud, sand, and extreme temperatures.The rifle can be operated with minimal training, which has made it especially popular among irregular forces and guerrilla fighters. Over 100 million units of the AK-47 and its variants have been produced, making it the most widely manufactured assault rifle in history. Its influence extends beyond military use; it appears on flags, national emblems, and even currency in some countries. Despite being over 75 years old, it continues to see active service in conflicts across the globe. Critics argue that its widespread availability has fueled violence and instability in many regions. Nonetheless, its reputation for reliability and ruggedness is unmatched. Several countries have produced their own licensed or unlicensed versions. The AK-47 has inspired countless other firearms, influencing modern weapon design. Its distinct curved magazine and rugged construction make it instantly recognizable. It’s not just a weapon but a part of global history. Whether viewed as a tool of liberation or destruction, the AK-47 remains one of the most influential firearms ever made.
+    </p>
+      <b> TONY STARK THE LEGEND</b>
+    <div style="color: orange;">
+        <a href="https://en.wikipedia.org/wiki/Tony_Stark_(Marvel_Cinematic_Universe)">Tony Stark</a>, also known as Iron Man, is a genius billionaire, inventor, and superhero from the Marvel Universe. He is the owner of Stark Industries, a powerful tech company known for its advanced weaponry and innovations. After being captured and injured, he builds the first Iron Man suit to escape, which sparks his journey as a hero. Stark is known for his intelligence, charm, and sarcastic wit. Despite his flaws, he often puts others before himself and fights to protect the world. He is a founding member of the Avengers, playing a key role in many battles. Over time, Tony grows from a selfish playboy into a selfless hero. His ultimate sacrifice in  <a style="color: black;" href="https://en.wikipedia.org/wiki/Avengers:_Endgame">"Avengers: Endgame"</a> saved the universe, solidifying his legacy.
+    </div>
+    <main style="color: green;">
+        Tony Stark's relationship with the AK-47 is indirect but significant in the story of his transformation into Iron Man. In the <a style="color: chocolate;" href="https://en.wikipedia.org/wiki/Iron_Man_(2008_film)">2008 Iron Man film</a>, Stark is captured by a terrorist group called the Ten Rings, who are armed with various weapons — including AK-47 assault rifles. These weapons, along with other advanced arms, were surprisingly traced back to Stark Industries. This shocking discovery makes Tony realize that his inventions are being used for destruction instead of protection. The AK-47, a symbol of global conflict and terrorism, becomes a powerful reminder for Tony of the damage caused by irresponsible weapons distribution. This experience deeply affects him and marks a turning point in his life. After escaping captivity, he shuts down Stark Industries' weapons division. Instead, he focuses on building technologies to protect people, like the Iron Man suits. The presence of the AK-47 and similar weapons serves as a catalyst for his moral awakening. It ultimately drives his transformation from a weapons dealer to a superhero.
+    </main>
+    <footer style="color: darkolivegreen;">so that was the story of relation of ak 47 with tony Stark</footer>
+```
+result ![inline_result](images/inlinestyle.png)
+- i put style attribution everywhere in links in paragraphs and in main in div in footler we can put it in everywhere (style attribute) how to put it put style like a attribute and in two commas write what u want border, width, font, color, eg. we put color her i show u how to put color with colon and then ehat type of colour u want put that in semicolon  (color:gree;)  style="color:"
+
+- and what we do if we have a 100's of paragraphs,divs,mains,etc etc and want all style at once for that we use
+```<style>
+p{color:red;}     (in place of p we can write anything like div, main,h1, h2, heading,footler etc etc) like i write in code down below  (div) 
+</style>
+```
+- that means in style tag we use "p" means paragraph that tells browser style all paragraphs. 
+```
+<h1 style="color: brown;">THE LEGENDARY AK-47</h1>
+    <style>
+        div{
+            color: rosybrown;
+        }
+    </style>
+    <div>
+        The <a href="https://www.istockphoto.com/photos/ak-47">AK-47</a>, officially known as the Avtomat Kalashnikova, is one of the most iconic and widely used assault rifles in the world. It was developed in the <a href="https://en.wikipedia.org/wiki/Soviet_Union">Soviet Union</a> by  <a href="https://www.gettyimages.in/photos/mikhail-kalashnikov">Mikhail Kalashnikov</a> and officially adopted by the Red Army in 1949. Renowned for its durability, simplicity, and low production cost, the AK-47 has become a symbol of both military power and revolutionary struggle. Its gas-operated, 7.62×39mm cartridge system allows it to function reliably in harsh conditions, including mud, sand, and extreme temperatures.The rifle can be operated with minimal training, which has made it especially popular among irregular forces and guerrilla fighters. Over 100 million units of the AK-47 and its variants have been produced, making it the most widely manufactured assault rifle in history. Its influence extends beyond military use; it appears on flags, national emblems, and even currency in some countries. Despite being over 75 years old, it continues to see active service in conflicts across the globe. Critics argue that its widespread availability has fueled violence and instability in many regions. Nonetheless, its reputation for reliability and ruggedness is unmatched. Several countries have produced their own licensed or unlicensed versions. The AK-47 has inspired countless other firearms, influencing modern weapon design. Its distinct curved magazine and rugged construction make it instantly recognizable. It’s not just a weapon but a part of global history. Whether viewed as a tool of liberation or destruction, the AK-47 remains one of the most influential firearms ever made.
+        </div>
+    </p>
+      <b> TONY STARK THE LEGEND</b>
+    <div>
+        <a href="https://en.wikipedia.org/wiki/Tony_Stark_(Marvel_Cinematic_Universe)">Tony Stark</a>, also known as Iron Man, is a genius billionaire, inventor, and superhero from the Marvel Universe. He is the owner of Stark Industries, a powerful tech company known for its advanced weaponry and innovations. After being captured and injured, he builds the first Iron Man suit to escape, which sparks his journey as a hero. Stark is known for his intelligence, charm, and sarcastic wit. Despite his flaws, he often puts others before himself and fights to protect the world. He is a founding member of the Avengers, playing a key role in many battles. Over time, Tony grows from a selfish playboy into a selfless hero. His ultimate sacrifice in  <a style="color: black;" href="https://en.wikipedia.org/wiki/Avengers:_Endgame">"Avengers: Endgame"</a> saved the universe, solidifying his legacy.
+    </div>
+    <main style="color: green;">
+        Tony Stark's relationship with the AK-47 is indirect but significant in the story of his transformation into Iron Man. In the <a style="color: chocolate;" href="https://en.wikipedia.org/wiki/Iron_Man_(2008_film)">2008 Iron Man film</a>, Stark is captured by a terrorist group called the Ten Rings, who are armed with various weapons — including AK-47 assault rifles. These weapons, along with other advanced arms, were surprisingly traced back to Stark Industries. This shocking discovery makes Tony realize that his inventions are being used for destruction instead of protection. The AK-47, a symbol of global conflict and terrorism, becomes a powerful reminder for Tony of the damage caused by irresponsible weapons distribution. This experience deeply affects him and marks a turning point in his life. After escaping captivity, he shuts down Stark Industries' weapons division. Instead, he focuses on building technologies to protect people, like the Iron Man suits. The presence of the AK-47 and similar weapons serves as a catalyst for his moral awakening. It ultimately drives his transformation from a weapons dealer to a superhero.
+    </main>
+    <footer style="color: darkolivegreen;">so that was the story of relation of ak 47 with tony Stark</footer>
+    <div>
+        Wanda Maximoff, also known as Scarlet Witch, is a powerful member of the Avengers.
+She possesses extraordinary abilities, including telekinesis, telepathy, and reality manipulation.
+Originally introduced as a reluctant ally, Wanda later became a trusted hero.
+Her powers are fueled by strong emotions, making her one of the most formidable Avengers.
+She shares a deep bond with Vision, which shapes many of her choices.
+Wanda’s journey is filled with loss, sacrifice, and personal growth.
+Despite her struggles, she continues to fight for what she believes is right.
+    </div>
+    <div>
+        Captain America, whose real name is Steve Rogers, is one of the most respected Avengers.
+Originally a frail young man, he became a super-soldier through the Super Soldier Serum.
+He is known for his unshakable sense of justice, courage, and leadership.
+Armed with his iconic vibranium shield, he defends the world against evil.
+Steve always puts the safety of others before his own life.
+His moral compass makes him a symbol of hope and integrity.
+Even when times are dark, Captain America inspires people to stand strong.
+    </div>
+```
+
+# external styles
+ - external styles means write css in another file and then link it with html we can link that css with thousand of html files at once through link tag (link is self closing tag ```<link   />```) self closing.
+ ```<link />
+ eg. we wrote css in chapter6.css file eg.
+ ``` div {
+    color: green;
+    font-size:30px;
+ }
+ ```
+ - then i can link this css file with unlimited html file take here our own file 
+ in html file i wrote ```<link href="chapter6.css" rel="stylesheet"/>``` if css file is in another folder then we have to metion that here we make in same folder so only write direct name of css file and to join two file u need to put one more attribution in link tag called (rel) write style sheet with rel ....
+
+## anatomy of css
+- ist we select something put curly braces{}
+and put property in curly braceswith colon and which property in semicolon eg.
+```
+p{
+    color:black;
+    font-size: 30px;
+    diaplay:flex;  (etc etc,,,,)
+}
+```
+## css selesctors
+- selesctors are what we select to style eg.
+```
+P{
+    color:red;
+}
+```
+here selector is p means paragraph
+  # element selector
+  ** 
+  element selctors are simple selectors in css like their name eg
+  p, div, h1,h2,main,footler,body,a,like we litreally have to write their names 
+  to select that thing to style 
+  **
+  *
+  those simple selectors where we only have to write their name to select for style are called element selectors eg. below 
+  *
+  ```
+p{
+    color: greenyellow;
+    font-size:20px;
+}
+a{
+    color:grey;
+    font-size:25px;
+}
+div{
+    font-size: x-large;
+    color: coral;
+}
+h1{
+    font-size: xx-large;
+    color: black;
+}
+h2{
+    font-size: 30px;
+    color: aqua;
+}
+
+  ```
+
+
+
