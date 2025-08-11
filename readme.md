@@ -230,6 +230,148 @@ black chocolate  $2.12   black	      instant energy
 cold cofee	    $1.34 	 grey	        keep mind focus
 green tea	     $0.98	 transparent	reduces cholestrol
 
-## 
-        
-        
+- but did u see that we put all in ```<td>``` and got same result 
+-   even our heading looks same as our content in the table (items,price,colour,benefits)
+- also looks same but to make it like as heading put```<th>``` instead of ```<td>```
+- only put headings in ```<th>``` eg.
+```
+  <table>
+            <tr>
+                <th>item</th>
+                <th>price</th>
+                <th>colour</th>
+                <th>benefits</th>
+            </tr>
+            <tr>
+                <td>black chocolate</td>
+                <td>$2.12</td>
+                <td>black</td>
+                <td>instant energy</td>
+            </tr>
+            <tr>
+                <td>cold cofee</td>
+                <td>$1.34</td>
+                <td>grey</td>
+                <td>keep mind focus</td>
+            </tr>
+            <tr>
+                <td>green tea</td>
+                <td>$0.98</td>
+                <td>transparent</td>
+                <td>reduces cholestrol</td>
+            </tr>
+        </table>
+    
+    
+</body>
+</html>
+```
+- her we got this in result...
+**item**	       **price**	**colour**	 **benefits**
+black chocolate	$2.12	     black	      instant energy
+cold cofee	      $1.34	     grey	       keep mind focus
+green tea	      $0.98	     transparent	 reduces cholestrol
+
+- did u see we got heading in bold letters due to ```<th>``` so from now on when we have to make heading rows in table we use ```<th>``` and for normal rows we use ```<td>```
+
+- also put table heading in ```<thead>``` just like we put ```<head>``` in simple html code
+- it cant do anything but just to easy to understand the code to coder and made code stylish and to style in css and perfect code structure eg.  
+```
+<table>
+ <thead>
+            <tr>
+                <th>item</th>
+                <th>price</th>
+                <th>colour</th>
+                <th>benefits</th>
+            </tr>
+            </thead>
+```
+- and thead should be placed inside table
+
+- and put table body i mean(table rows) inside ```<tbody>```this also cant do anything but easy for coders to understand and for perfect code structure eg. 
+```
+</tbody>
+            <tr>
+                <td>black chocolate</td>
+                <td>$2.12</td>
+                <td>black</td>
+                <td>instant energy</td>
+            </tr>
+            <tr>
+                <td>cold cofee</td>
+                <td>$1.34</td>
+                <td>grey</td>
+                <td>keep mind focus</td>
+            </tr>
+            <tr>
+                <td>green tea</td>
+                <td>$0.98</td>
+                <td>transparent</td>
+                <td>reduces cholestrol</td>
+            </tr>
+            </tbody>
+        </table>
+```
+## semantic markup
+** semantic elements all work like ```<div>``` but give meaning to the code eg this part of code is what part of code **
+
+- semantic elements cant do anything new but provide meaning to our code(content)
+- eg. we can put div but if we put main in place of div coder can understand eassily that this is the main part of the body also screen reader can know this is the main part of the body like i will give u example.
+```
+ <div>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et delectus voluptatem labore commodi. Aliquam, aliquid similique. Non libero minus, nostrum labore explicabo dolore quod vero beatae, facilis, fugit mollitia earum!</p>
+        </div>
+```
+- lets assume this is our main body in the code.
+- we write code here with div and div make it seperate and when we have a very big code 
+- and we fill it div coder and screen reader(inspect) got confuse what part is this
+- like in the below pic
+
+   ![example of ```<main>``` tag](images/main.png)
+
+   - but if we write this same code with ```<main>``` tag
+   - nothing gonna change main did same as div (seperates it) but 
+   - when any other coder or screen reader(inspect) checks it
+   - he says ohhh this is main body of the page.. eg..
+```   
+ <main>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et delectus voluptatem labore commodi. Aliquam, aliquid similique. Non libero minus, nostrum labore explicabo dolore quod vero beatae, facilis, fugit mollitia earum!</p>
+ </main>
+```
+ ![main_final_result_example](images/main_final_result.png)
+
+
+- same as ```<header>``` cant do anything same as ```<div>``` but told screen reader this is the heading
+```
+<h1>lorem episum</h1>
+        <header>lorem episum story</header>
+
+```
+- same as ```<footer>``` can do anything same as div but told the screen reader this is footer ( in footer we wrote mainly the contact detalis and other thing like feedback etc etc)
+- hey we can write anything in this but mainly foot of the webpage to ease the coder that this is foot of the page. 
+```
+ <footer>copyright no one 2025</footer>
+```
+- same as ```<nav>``` do nothing same as div but tell us this part is navigation part
+- navigation(means this part contains links to another page) easy for coder or screen reader(inspect) eg. 
+```
+<nav>
+            <ul>
+                <li><a href="https://google.com">google</a></li>
+                <li><a href="https://facebook.com">facebook</a></li>
+            </ul>
+        </nav>
+```
+- dont do anything here just tell this part is navigation part(contain links to another page).
+
+- same as ```<aside>``` aside (means something thats tells coder or screen reader little bit about main content of the page) works same as div we know that .
+
+- same as ```<time>``` tells coder or screen reader that in this part we put info. about time releated. eg.
+![time_concept](images/time.png)
+
+- same as ```<summary>``` tells coder or screen reader that part contains summary
+
+* in short sematic elements tells coder or screen reader wha this part contains *
+
+
