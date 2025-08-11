@@ -169,5 +169,67 @@ text
 ```<input type="radio" name="choice" value="B"> ```
 Radio buttons allow selecting only one option per name group.
 
+## chapter 5 other elements
 
+## topic one ```<spans>```
+- spans are generic inline elements. they have no special
+- meaning but can be use later in styling in css.
+- like i give u example
+``` <p>hey i love my <span>cats </span> and i love my cars</p>```
+    - here i put cats in between span and if u run the code nothing 
+    - is gonna happen but when we enter in css we can change colour, style ,etc etc 
+    - of the thing which is between in span.
 
+## topic 2 ```<div>```
+- A div can be used to group some things together, e.g.,
+```<div>```
+```<p>Hey, I love my <span>cats</span> and I love my cars</p>```
+```<h1>Come learn HTML and CSS with us</h1>```
+```<h2>Let's start with elements</h2>```
+```<p>Hello, we are all going to read about elements now in HTML, and```
+```after that, we will also learn CSS.</p>```
+```</div>```
+
+** Here, we wrote a heading and a paragraph and closed all of them inside a div element. When we run the code, we see the headings and paragraphs, but when we learn CSS, we can style that part alone. For example, we can put the code in a div and then style this part separately in CSS. We can style this entire section of code all at once. **
+
+## topic 3 ```<table>```
+- table is the element use use to make the tables
+in table element we have to put ```<tr>``` element which tells table element that i am making rows in table now
+- then to make rows we have to put ```<td>``` element eg.
+```
+        <table>
+            <tr>
+                <td>item</td>
+                <td>price</td>
+                <td>colour</td>
+                <td>benefits</td>
+            </tr>
+            <tr>
+                <td>black chocolate</td>
+                <td>$2.12</td>
+                <td>black</td>
+                <td>instant energy</td>
+            </tr>
+            <tr>
+                <td>cold cofee</td>
+                <td>$1.34</td>
+                <td>grey</td>
+                <td>keep mind focus</td>
+            </tr>
+            <tr>
+                <td>green tea</td>
+                <td>$0.98</td>
+                <td>transparent</td>
+                <td>reduces cholestrol</td>
+            </tr>
+        </table>
+```
+- we get this result....
+        item	   price	 colour	     benefits
+black chocolate  $2.12   black	      instant energy
+cold cofee	    $1.34 	 grey	        keep mind focus
+green tea	     $0.98	 transparent	reduces cholestrol
+
+## 
+        
+        
