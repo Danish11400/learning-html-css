@@ -615,6 +615,63 @@ look here i apply border to my paragraph which only p inherit not the elements i
 ![inheritborder](images/inherit2.png)
 
 
+## chapter 8 styling text
+# font-family 
+- how to apply eg.
+```
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+```
+- why we use that much font because some are avialable in mac and some are avilable in windows and we vs code give us suggestion of fonts in a line (in aline every font is of only one type but with differnt names due to window and mac) and we apply every one in that line becuse the one is avilable in this according ton our pc is applied.
+
+# font-size
+applied same as everything in css eg.
+```
+h1{
+    font-size:30px;
+}
+```
+# font-weight
+- font weight means (bold,normal,lighter,bolder we cam also we numeric no in 100's (100 to 900 etc)).
+```
+body{
+    font-weight:bold;
+}
+```
+# font-style
+```
+body{
+    font-style; italic;
+}
+```
+- font-style can be (normal,italic,oblique.)
+# text-align
+- where u want to put the text eg.(in center,left or end, right or start, justify)
+- justify is the option where we can make text justify i mean if user shrinks the screen he can read the text line by line.eg. of justify with code and result pic.
+```
+body{
+    font-weight:bold;
+    text-align: justify;
+}
+```
+- justify result is in below video.
+
+[▶️ Watch the video](https://youtu.be/M1RCA05mTlg)
+or we can right center
+```
+h1{
+    text-align: center;
+}
+```
+
+
+
+
+
 
 
 
