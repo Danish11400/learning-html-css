@@ -728,7 +728,9 @@ h1{
  ```
  result is in below pic
  ![manyshadow](images/shadow2.png)
- 
+ # width: 55%;
+ - we can give the width to the text also for how much percent of page after text go to next line
+
 
 
 
