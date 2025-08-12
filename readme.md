@@ -504,6 +504,16 @@ h2{
 }
 
   ```
+  ## the world of css
+
+  # the background-color
+  - when we have to change the background color of anything like body,h1,h2,p,
+  - div,main,a, etc etc... we just write in them eg in div
+  ```
+  div{
+    background-color: olive;
+  }
+```
 
 
 
