@@ -678,9 +678,57 @@ h1{
 ```
 ** we got result h  e  l  l  o (means space between the letters) **
  # word-spacing
- put space between the words
+- put space between the words
+ ```
+ body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     word-spacing: 20px;
+}
+ ```
+ # line-height
+ - put space between the lines.
+ also wrote in px
+ # adding custom fonts with google fonts
+ - mean swe can add very special fonts from google fonts website it give me href link to link in my html file and then write that font name in css file to apply eg.
 
+look at google fonts i saw a font and copy its html code 
+```
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Akronim&display=swap" rel="stylesheet">
+```
+then go to css type their
+``` 
+body{
+    font-family:akronim;
+}
+```
+** akronim is the name of the font **
+and it applies let me show u by picture
+![googlefontspic](images/googlefonts.png)
 
+# text-shadow
+- put shodow in the text with can add multiple shadows also eg'
+```
+h1{
+    text-shadow: 2px 2px 1px cyan;
+}
+
+```
+** ist pixel is for x axis shadow **
+** 2nd pixel is for y axis shadow **
+** 3rd pixel is for bluring shadow **
+eg' i will give u pic of result
+![shadowpic](images/shadow.png)
+ also we can add multiple shadows in one eg'
+ ```
+h1{
+    text-shadow: 2px 2px 1px cyan, -3px 2px 2px magenta, 2px 1px 3px olive;
+}
+ ```
+ result is in below pic
+ ![manyshadow](images/shadow2.png)
+ 
 
 
 
