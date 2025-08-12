@@ -667,6 +667,19 @@ h1{
     text-align: center;
 }
 ```
+# letter-spacing
+space between the letters eg'
+```
+<h1>hello<h1>
+and 
+h1{
+    letter-spaceing:10px;
+}
+```
+** we got result h  e  l  l  o (means space between the letters) **
+ # word-spacing
+ put space between the words
+
 
 
 
