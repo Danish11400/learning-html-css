@@ -509,11 +509,114 @@ h2{
   # the background-color
   - when we have to change the background color of anything like body,h1,h2,p,
   - div,main,a, etc etc... we just write in them eg in div
-  ```
+```
   div{
     background-color: olive;
   }
 ```
+# the rgb colour(225,225,225);
+- look thr rgb colour called (red,green & blue)
+- which means we can make any colour by putting the value in rgb eg.
+``` body{
+    background-color:rgb(120,220,150);
+}
+```
+- here we are making body background color black because 0,0,0 level is black
+** in rgb we can to from 0 to 255 level **
+* and if we make all levels 255,255,255, it is white *
+another example
+```
+p{
+    background-color:rgb(0,0,0);
+    color:rgb(255,120,225);
+}
+```
+- eg in below picture
+![rgbcolursexample](images/rgb.png)
+** (in simple we can make different colours by putting value in rgb) **
+# hexadecimal colors
+* same as rgb just typing value is different i will show u the value in below picture
+![hexadecimalcolourspic](images/hexadecimal.png)
+** its value goes from 0 to 9 an dthen a to f **
+* here a represents 10 and f represents 15 *
+eg here
+```
+body{
+    background-color:#ffff00;
+}
+```
+# opacity of colors 
+- opacity means intensity of colors
+- for opacity we generally use (rgba)
+eg.
+```
+main{
+font-size:35px;
+color:rgba(123,234,0,0.56);
+}
+```
+** opacity value goes from 0 to 1 **
+* and another way to do that opacity thing is use directly use opacity title * eg.
+** remember opacity title also use values from 0 to 1 **
+```
+h2{
+    font-size: 30px;
+    color: aqua;
+    opacity:0.72;
+}
+```
+ ** one and only difference between rgba and opacity title is that if we say eg. **
+ ```
+ main{
+font-size:35px;
+background-color:rgba(123,234,0,0.56);
+}
+``` 
+** here only background opacity changes not also of text ** but
+```
+h2{
+    font-size: 30px;
+    background-color: aqua;
+    opacity:0.72;
+}
+```
+** here opacity of background changes but also opacity of text also changes **
+
+# inherit
+- look inn css many proprty inherit their parent property eg. color etc etc
+- but border did not inherit parent property eg.
+```
+<p>
+    In a world where heroes from different universes unite, Wanda Maximoff, the Scarlet Witch,<span> uses her chaos magic to protect reality itself. Captain America stands as the fearless leader</span>, guiding the team with courage and strategy. Hulk’s unmatched strength smashes through any <em>obstacle in their path</em>. Doctor Strange opens portals and bends time to give them the upper hand in battles. From another dimension, Ben 10 arrives, transforming into powerful aliens to aid the fight. Gwen Tennyson, with her magical abilities and intellect,<strong> works alongside Wanda to weave protective spells</strong>. Kevin Levin uses his absorption powers to enhance his combat strength. Together, they form an unstoppable alliance of magic, might, and technology. Their combined powers make even the greatest villains tremble. Bound by trust and the goal to save worlds, they stand ready for any challenge.
+</p>
+```
+```
+p{
+    color: greenyellow;
+    font-size:20px;
+}
+```
+
+![inheritcolorexample](images/inheritcolor.png)
+- here i apply color to paragrapgh and when i run code the em,strong,span elements also get colour (inherit from parent(paragraph)) but we can change colour of our elemnts from parent element eg'
+strong{
+    color:grey;
+}
+** but (border) is the one that did not inherit from parent eg.
+```
+p{
+    color: greenyellow;
+    border:3px solid black;
+}
+```
+**
+look here i apply border to my paragraph which only p inherit not the elements in p like span, em , strong, a, etc etc. result in shown in below line
+
+![inheritborder](images/inherit2.png)
+
+
+
+
 
 
 
