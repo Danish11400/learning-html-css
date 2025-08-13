@@ -2,9 +2,14 @@ body{
     font-family: Rock Salt;
     font-size: 32px;
     text-transform: capitalize;
+    text-align: justify;
+    
+}
+.pass{
+    text-align: center;
 }
 h1{
-    text-align: center;
+    text-shadow:2px 2px 2px magenta, 4px 4px 4px cyan, 6px 6px 6px pink, 8px 8px 8px olive;
 }
 #leafy{
     color: olive;
@@ -23,12 +28,12 @@ a{
     color: darkcyan;
 }
 a:visited{
-    color: blanchedalmond;
+    color:indigo;
     font-weight: bolder;
 }
 a:hover{
-    text-decoration: underline wavy chocolate;
-    cursor:cell;
+    text-decoration: underline dotted mediumseagreen;
+    cursor:pointer;
 }
 ul{
 list-style-type: square;
