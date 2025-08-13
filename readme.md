@@ -827,7 +827,7 @@ h1{
 }
 ```
 # styling links
-- if we have to style links we can sttle them different ways eg.
+- if we have to style links we can style them different ways eg.
 - if we have to style visited links (those links where we tap or we visit)
 - we have to type
 ```
@@ -995,8 +995,8 @@ li span{
     font-family: serif;
 }
 ```
-- that means style those spans only which are in li (we just have to put space between those no commas not anything just space)
-## but if i have many spans in many li at differnet places and in want to style this particular one just put id attribution in its ui and then do eg. here we put id="cast"
+- that means style those spans only which are nested in li (we just have to put space between those no commas not anything just space)
+## but if i have many spans nested in many li at differnet places and in want to style this particular one just put id attribution in its ui and then do eg. here we put id="cast"
 ```
 <ul id="cast">
         <li>F. Murray Abraham <span>Antonio Salieri</span></li>
@@ -1068,7 +1068,7 @@ h2.score{
 }
 ```
 ### dont put space betwween these if we put space between then then it thinks like emmm the score that are nested in h2 but we dont have nested class is attribute and atributes are not nested
- 
+
 
 
 
