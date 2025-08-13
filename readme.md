@@ -803,7 +803,7 @@ h1{
     font-style: italic;
 }
 ```
-# list style
+# list-style-type
 - in this we can style un ordered list by ```list-style-type:----:``` eg,
 ```
 <ul id="listsbro">

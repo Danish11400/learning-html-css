@@ -1,0 +1,35 @@
+body{
+    font-family: Rock Salt;
+    font-size: 32px;
+    text-transform: capitalize;
+}
+h1{
+    text-align: center;
+}
+#leafy{
+    color: olive;
+    text-decoration-line: underline;
+    text-decoration-color: darkgreen;
+}
+.cigg{
+    font-style: italic;
+}
+h2{
+        color: orange;
+        text-decoration: underline darkred;
+}
+a{
+    text-decoration: none;
+    color: darkcyan;
+}
+a:visited{
+    color: blanchedalmond;
+    font-weight: bolder;
+}
+a:hover{
+    text-decoration: underline wavy chocolate;
+    cursor:cell;
+}
+ul{
+list-style-type: square;
+}
