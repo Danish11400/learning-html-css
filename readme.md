@@ -730,7 +730,141 @@ h1{
  ![manyshadow](images/shadow2.png)
  # width: 55%;
  - we can give the width to the text also for how much percent of page after text go to next line
-
+ ## chapter 9 more text styling
+ # text-transform
+ - text transform used to change casing of text (capatlize, uppercase,lowercase)
+ - in capatlize = text 1st letter of every word changes in capital
+ - in upper and lowercase (each letter of text changes into capital & small)which we slect eg'
+ ```
+  <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quae vel esse porro molestiae voluptatibus debitis, et illum facere laudantium possimus at beatae iure aspernatur cum iusto, natus nobis laborum.</h1>
+ ```
+ ** 
+ note when we transform the text the links in that text automatically turns under line
+ to change that  we neet to type``` text-decoration;none;```
+ on that para or any other thing
+ **
+ ```
+h1{
+    text-transform: capitalize;
+}
+ ```
+ # text-decoration
+ - hey we decorated text through text decoration (line on the text)
+ - we can decorate (text-decoration-line,text-decoration-style,text-decoration-color)
+-  we can write them in two ways; eg.
+```
+- 1st way easy type text decoration and add what type of colour u want in line , what type of line u want, and what effect of line u want and they are without comma
+h1{
+    text-transform: capitalize;
+    text-decoration:cyan line-through dotted 50px;
+}
+```
+- and the second way
+```
+h1{
+    text-transform: capitalize;
+    /* text-decoration:cyan line-through wavy ; */
+    text-decoration-line:underline ;
+    text-decoration-color: olive;
+    text-decoration-style: dotted;
+    text-decoration-thickness:50px;
+}
+```
+# id-attribute in css
+ - look if we have to style any element we select that in css and start styling
+ - but what if eg. we have to style a paragrapgh only one paragrapgh and we have a lot paragraph in html then all paragrapghs style at once but we have to style only one or two paragraph so for that we add id attribute at that place eg.
+ ```
+<div>Lore quisquam asperiores?</div>
+    <div id="hello">Lorem ipsum porro sapiente. Cum eveniet Distinctio, soluta?</div>
+    <div>Lorem ipsum doloricabo maiores.</div>
+```
+```
+#hello{
+    color: cyan;
+    font-style:italic;
+}
+```
+- here from 3 divs we style only one of our own choice with the help of id attribution
+- and in css we have to use the id name that we put with hash (#)
+# class selector
+- works same as id selector
+-just in place of hash in css in id selector use .(dot) eg.
+```
+<div>Lore quisquam asperiores?</div>
+    <div class="hello">Lorem ipsum porro sapiente. Cum eveniet Distinctio, soluta?</div>
+    <div>Lorem ipsum doloricabo maiores.</div>
+    <div class="hello">lodhebde hewhwsn cugwsuhs jekiekb dhjjd hjdkiekj hdggduid jidggd jj </div>
+```
+```
+.hello{
+    text-decoration-line: line-through;
+    text-decoration-color: pink;
+    text-shadow:3px,2px,3px, pink;
+    font-style: italic;
+}
+```
+# list style
+- in this we can style un ordered list by ```list-style-type:----:``` eg,
+```
+<ul id="listsbro">
+        <li>pizza, burger, momo</li>
+        <li>chicken, biryani, mutton</li>
+        <li>pen, pencil, notebook</li>
+        <li>cigg, tobacco, cigar</li>
+        <li>japan, russia, saudi</li>
+    </ul>
+```
+```
+#listsbro{
+    list-style-type: lower-greek;
+}
+```
+# list-style-image
+- we can put small images also in unordered list like we ahve to do is 
+```
+#hello{
+    list-style-image:put the link in it
+}
+```
+# styling links
+- if we have to style links we can sttle them different ways eg.
+- if we have to style visited links (those links where we tap or we visit)
+- we have to type
+```
+<h1>Lorem ipsum dolor sit <a href="https://www.google.com">google</a> consectetur adipisicing elit. Autem quae vel esse porro molestiae voluptatibus debitis, et illum facere laudantium possimus at beatae iure aspernatur cum <a href="https://www.fb.com">facebook</a>, natus nobis laborum.</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit alias consequuntur eius obcaecati, eaque hic iste temporibus, numquam quisquam facere  <a href="https://www.codepen.com">codepen</a>fugiat quis nam sapiente molestiae architecto accusantium ex unde velit!</p>
+```
+```
+a:visited{
+    color: chocolate;
+}
+```
+# we can also hover links not only links but we can hover anything
+** (hover is when we take cursor on the text(we only take cursor their we cant tap) which we hover changes its style style can be anything color , line, font, etc) eg.
+```
+a:hover{
+    color: darkgreen;
+}
+and if we want to style the link by lines when we hover or just go over the link then ist we have to do text-decoration in "a" none eg.
+a{
+    text_decoration:none;
+}
+a:hover{
+    text-decoration:underline;
+}
+or
+h1:hover{
+    color: darkslategrey;
+}
+```
+we can style cursor also when cursor goes that place which we hover eg .
+if we hover links when cursor goves over links cursor shape changes eg.
+```
+a:hover{
+    color: darkgreen;
+    cursor: pointer;
+}
+```
 
 
 

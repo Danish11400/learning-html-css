@@ -1,0 +1,31 @@
+h1{
+    text-transform: capitalize;
+    /* text-decoration:cyan line-through wavy ; */
+    text-decoration-line:underline ;
+    text-decoration-color: olive;
+    text-decoration-style: dotted;
+    text-decoration-thickness: 2px;
+    text-align: justify;
+    width: 40%;
+}
+.hello{
+    text-decoration-line: line-through;
+    text-decoration-color: pink;
+    text-shadow:3px,2px,3px, pink;
+    font-style: italic;
+    font-size: 20px;
+}
+#listsbro{
+    list-style-type:armenian;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: darkgreen;
+    cursor: wait;
+    text-decoration: underline;
+}
+h1:hover{
+    color: darkslategrey;
+}
