@@ -865,6 +865,216 @@ a:hover{
     cursor: pointer;
 }
 ```
+## chapter 10 selector pt. 1
+
+# universal selector(*)
+- if we type * it is universal selector eg.[IT SELECTS EVERY THING]
+```
+*{
+    color:red;
+}
+```
+- every thing on the page gets red.
+# attribute selector
+- but why we should select attributes 
+- like give colours or style checkboxes input text boxes etc how to select attributes eg.
+```
+<input type="text" placeholder="username">
+        <input type="number" placeholder="rating">
+        <label for="permission">I give you permission to use my rating: </label>
+        <input type="checkbox" id="permission">
+```
+```
+input{
+    background-color: rgb(225, 255, 0);
+}
+```
+- all input select exept checbox and gets yellow
+- i will show u its result also in below pic
+![image_of_attribute_selector](images/attributselector.png)
+*
+ but if we have to select one specific input then we have to write its (type) in square bracket also eg.
+ *
+```
+<input type="text" placeholder="username">
+        <input type="number" placeholder="rating">
+        <label for="permission">I give you permission to use my rating: </label>
+        <input type="checkbox" id="permission">
+```
+```
+input[type="number"]{
+    background-color: rgb(225, 255, 0);
+}
+```
+# selecting one type of links
+- eg. we have wikipedia links in our page and we have instagram links in our page and we have twitter links in our page and we want to style wikipedia links differnt and instagram links different and twitter links differnet then eg.
+```
+ <p>
+        <a href="https://en.wikipedia.org/wiki/Antonio_Salieri">Antonio Salieri</a>
+        believes that
+        <a href="https://en.wikipedia.org/wiki/Wolfgang_Amadeus_Mozart">Wolfgang Amadeus Mozart</a>'s music is divine
+        and
+        miraculous. He wishes he was himself as good a
+        musician as Mozart so that he can praise the Lord through composing. He
+        began his career as a devout man who believes his success and talent as a
+        composer are God's rewards for his piety. He's also content as the
+        respected, financially well-off, court composer of
+        <a href="https://en.wikipedia.org/wiki/Joseph_II,_Holy_Roman_Emperor">Austrian Emperor Joseph II</a>. But he's
+        </p>
+```
+** 
+here we have wikipedia links and we want to style wikipedia links same at once so **
+to slect all wikipedia links at once find commom word in wikipedia links eg here we found (wiki) commom word in all 3 links.
+** 
+```
+a[href*="wiki"]{
+    color: olive;
+    font-weight: bold;
+}
+```
+* its important to put star beacuse it selects all  links with wiki word *
+
+### hey i have some notes of html on my book one of them is 
+## if we have to link any thing within the page we put # name in href ist then name but we dont put # in id then eg. 
+```
+<ul>
+        <li><a href="#summary">Summary</a></li>
+        <li><a href="#cast">Cast</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+    </ul>
+    <h2 id="summary">Summary</h2>
+```
+## now come to the point that if we have to select that link which starts with hash(#)
+- then we use ```[href^="#"]``` eg.
+```
+a[href^="#"]{
+
+}
+```
+## and now if we have to select those links which ends with .org
+- then use 
+```
+a[href$=".org"]{
+
+}
+```
+## grouping selectors
+** if we have to style differnt elements same **
+** then how can we do that once ** eg.
+if we have to do same style foe h1 h2 h3 p div thyen use comma eg.
+```
+h1,h2,h3,h4,p,div
+{
+   color:cyan;
+}
+2nd example
+.tag, .class, featured{
+    color:white;
+    background-color:black;
+}
+```
+#### only thing to remeber is dont put comma on last one
+
+## descendant element 
+* 
+it means eg. in my html code i have every spans and i want to style same only those spans that are in <li> then i wrote like this
+```
+<ul>
+        <li>F. Murray Abraham <span>Antonio Salieri</span></li>
+        <li>Tom Hulce <span>Wolfgang Amadeus Mozart</span></li>
+        <li>Elizabeth Berridge <span>Constanze Mozart</span></li>
+        <li>Roy Dotrice <span>Leopold Mozart</span></li>
+        <li>Simon Callow <span>Emanuel Schikaneder</span></li>
+        <li>Christine Ebersole <span>Katerina Cavalieri</span></li>
+        <li>Jeffrey Jones <span>Emperor Joseph II</span></li>
+    </ul>
+```
+```
+li span{
+    color: blue;
+    font-family: serif;
+}
+```
+- that means style those spans only which are in li (we just have to put space between those no commas not anything just space)
+## but if i have many spans in many li at differnet places and in want to style this particular one just put id attribution in its ui and then do eg. here we put id="cast"
+```
+<ul id="cast">
+        <li>F. Murray Abraham <span>Antonio Salieri</span></li>
+        <li>Tom Hulce <span>Wolfgang Amadeus Mozart</span></li>
+        <li>Elizabeth Berridge <span>Constanze Mozart</span></li>
+        <li>Roy Dotrice <span>Leopold Mozart</span></li>
+        <li>Simon Callow <span>Emanuel Schikaneder</span></li>
+        <li>Christine Ebersole <span>Katerina Cavalieri</span></li>
+        <li>Jeffrey Jones <span>Emperor Joseph II</span></li>
+    </ul>
+```
+```
+#cast li span{
+    color: red;
+}
+or 
+#cast span{
+    color:red;
+}
+```
+- here also put space only between them.
+## child combinator
+eg. in below html code 
+```
+<ol>
+            <li>Was Salieri a real person or just made up for the movie?
+                <ul>
+                    <li>Saliera was a real person!</li>
+                    <li>Yes, Antonio Salieri [1750-1825] was a real person, an Italian composer and conductor. As the
+                        Austrian imperial Kapellmeister from 1788 to 1824, he was one of the most important and famous
+                        musicians of his time.</li>
+                </ul>
+            </li>
+            <li>What is the music in the movie?
+                <ul>
+                    <li>First cut, Leopold's theme (recurring)</li>
+                    <li>Opening credits: Symphony No. 25 In G Minor </li>
+                </ul>
+            </li>
+        </ol>
+```
+we have li inside ul and ul inside ol and we want to style only li of ol but if we type
+
+``` li{```
+    ```border: 1px solidblue;```
+```    }```
+but we want to style only lis of ol here every li gets styled then we use 2nd method
+```
+ol li{
+    border: 1px solidblue;
+}
+```
+* but here also the same problem ul lis are also inside ol li's then we do this
+```
+ol > li {
+    border: 1px solidblue;
+}
+```
+** then finally we get only ol li's selected **
+### and the reason i use border here is due to border is not inherit while color is so what we type if we type color it can inherit in all li's
+
+## what if i have to style id or class in a specific element
+** eg i have to style class which is in h2
+```<h2 class="score">Average Rating: 9.1/10</h2>```
+and in my code i have large no. of classes already but i have to style this one only then
+```
+h2.score{
+    color:red;
+}
+```
+### dont put space betwween these if we put space between then then it thinks like emmm the score that are nested in h2 but we dont have nested class is attribute and atributes are not nested
+ 
+
+
+
+
+
+
 
 
 
