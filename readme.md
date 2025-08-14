@@ -1055,11 +1055,11 @@ ol > li {
     border: 1px solidblue;
 }
 ```
-** then finally we get only ol li's selected **
+**then finally we get only ol li's selected**
 ### and the reason i use border here is due to border is not inherit while color is so what we type if we type color it can inherit in all li's
 
 ## what if i have to style id or class in a specific element
-** eg i have to style class which is in h2
+**eg i have to style class which is in h2**
 ```<h2 class="score">Average Rating: 9.1/10</h2>```
 and in my code i have large no. of classes already but i have to style this one only then
 ```
@@ -1068,6 +1068,159 @@ h2.score{
 }
 ```
 ### dont put space betwween these if we put space between then then it thinks like emmm the score that are nested in h2 but we dont have nested class is attribute and atributes are not nested
+
+
+### chapter 11 the box model
+## in this chapter we will study about border, padding and margin , i will show u photo of that then we will explane that 
+![border_padding_margin_pic](images/Screenshot%202025-08-14%20144035.png)
+
+## border
+- in this we can make border
+- and then we style border like(border-color, border-width, border-style)eg.
+```
+ <h1>I Am The Leader</h1>
+```
+```
+h1{
+    border-width: 2px;
+    border-color: green;
+    border-style: ridge;
+}
+```
+**but we can style them at once eg.**
+```
+h1{
+    border: 2px cyan dotted;
+}
+```
+__but we can also style every side of border differently eg.__
+```
+h1{
+    border-bottom: 3px darkgreen solid;
+    border-top: 5px double magenta;
+    border-right: 4px dotted olive;
+    border-left: 6px solid red;
+}
+```
+## the border(height, width, and percentage)
+- if we make border i can cross through the page we can contol that by these eg.
+```
+ <h1>I Am The Leader</h1>
+ ```
+ ```
+h1{
+    border: 4px green solid;
+    width: 300px;
+    height: 75px;
+}
+```
+## now what is the use of percentage; eg.
+```
+<div id="container">
+        <div class="box"></div>
+    </div>
+```
+eg. here we have div inside div we can make borders for both eg if we give height and width to ist div and wants to give height and width of second div according to ist box we can control them by percentage eg.
+```
+#container{
+    border: 4px solid magenta;
+    width: 400px;
+    height: 100px;
+}
+.box{
+    border: 3px solid olive;
+    width: 50%;
+    height: 40%;
+}
+```
+![result](images/percentage.png)
+im 2nd div we make its width and height according to ist like we keep its width 50% of ist  and height 40% of ist 
+__we can only style with percentage the box which is inside of any other box__
+## padding.
+- in the box we write the main content but if u see the content we write shows from the right side of box like it remains attached to the box so to make the content in center we use padding eg.
+```
+<h1>I Am The Leader</h1>
+```
+```
+h1{
+    border: 4px green solid;
+    width: 300px;
+    height: 75px;
+    padding: 20px;
+}
+```
+- when we use padding and pur single value it applies space from 4 side example in upeer coding or we can use it seperately on different sides eg.
+```
+h1{
+    border: 4px green solid;
+    width: 300px;
+    height: 75px;
+    padding-left: 20px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    padding-right: 30px;
+}
+```
+or we can use differnt value for differnt sides in one eg.
+```
+h1{
+    border: 4px green solid;
+    width: 300px;
+    height: 75px;
+   padding: 20px 30px   40px    50px;
+            TOP  RIGHT  BOTTOM  LEFT (this is the order)
+}
+```
+## as u see we made 2 boxes but still inside box is connected to the upper box so to put space between them we use margin eg.
+```
+<div id="container">
+        <div class="box">hi</div>
+    </div>
+```
+```
+.box{
+    border: 3px solid olive;
+    width: 50%;
+    height: 40%;
+    margin: 8px;
+}
+```
+and the result is
+![result_of_margin](images/margin.png)
+**we can put space(margin) in outer boxes also not only with inside and outside boxes eg.**
+```
+<h1>hello brother</h1>
+    <h2>what brother</h2>
+```
+```
+h1{
+    border: 4px green solid;
+    width: 300px;
+    height: 75px;
+   padding: 20px 30px 40px 50px;
+   margin: 5px;
+}
+h2{
+    border: 6px solid black;
+    margin: 4px;
+}
+```
+also we can use margin seperately for differnt sides like
+```
+ margin-top: 2px;
+    margin-bottom: 3px;
+    margin-right: 3px;
+    margin-left: 2px;
+```
+also use margin at one like padding eg.
+```
+h2{
+    margin: 2px 4px    5px      6px;
+            TOP RIGHT  BOTTOM   LEFT
+}
+```
+
+
 
 
 
