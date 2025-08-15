@@ -1149,7 +1149,7 @@ h1{
     padding: 20px;
 }
 ```
-- when we use padding and pur single value it applies space from 4 side example in upeer coding or we can use it seperately on different sides eg.
+- when we use padding and put single value it applies space from 4 side example in upeer coding or we can use it seperately on different sides eg.
 ```
 h1{
     border: 4px green solid;
@@ -1259,7 +1259,7 @@ h1{
     margin: 3px;
     box-sizing: border-box;
 }
-.brick{
+h1{
      border: 5px solid green;
     width: 200px;
     height: 100px;
