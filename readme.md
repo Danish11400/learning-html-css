@@ -1205,7 +1205,7 @@ h2{
     margin: 4px;
 }
 ```
-also we can use margin seperately for differnt sides like
+also we can use margin seperately for different sides like
 ```
  margin-top: 2px;
     margin-bottom: 3px;
@@ -1219,6 +1219,185 @@ h2{
             TOP RIGHT  BOTTOM   LEFT
 }
 ```
+# box-sizing:border-box
+ - look if we type
+ ```
+ .box{
+    width:100px;
+    height:200px;
+    border: 5px solid green;
+    padding:20px;
+ }
+ ```
+ - we get a content (that we wrote) of same px we put but the box is of more eg in height the box is 250px like 200+20+20+    5+5=250 same with width eg.
+                           padding   border
+![example](images/pixels.png)
+ so to contol that we use 
+  ```
+ .box{
+    width:300px;
+    height:200px;
+    border: 5px solid green;
+    padding:20px;
+    box-sizing: border-box;
+ }
+ ```
+ now the result is
+ ![box_sizing_result](images/boxsizing.png)
+ ## display property
+ - i will tell u by example
+ ```
+ <h1>hello commander</h1>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe recusandae minima cum temporibus amet at magnam <span class="brick">voluptatibus</span> quo, nostrum ullam cupiditate ut pariatur sint iure reiciendis atque quos id quis! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi iure autem distinctio impedit ipsum aspernatur ullam similique nisi debitis nemo velit officiis nesciunt ipsa, earum temporibus maxime iste blanditiis placeat! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione mollitia deleniti velit, suscipit laudantium iure natus, perspiciatis praesentium id doloremque itaque nam quisquam ea ullam atque eligendi voluptates possimus consequuntur.</p>
+ ```
+ ```
+h1{
+    border: 5px solid olive;
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+    margin: 3px;
+    box-sizing: border-box;
+}
+.brick{
+     border: 5px solid green;
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+    margin: 3px;
+}
+ ```
+ ![displayresult](images/display.png)
+  - you can see in this picture after adding padding and margin to both h1 and span 
+  (span are making space only from left and right correctly and combine with other lines from top and bottom while h1 make space from four sides this is due to span is an inline element so to control this display of the differnt elements we use [display]) eg.
+```
+display:block;
+or 
+dispaly:inline;
+or 
+display:inline-block;
+```
+  we will difine this in below pictures
+  ![define_block](images/block.png)
+  ![define_inline](images/inline.png)
+  ![define_inline-block](images/inline-block.png)
+  - and w ecan display=none to hide things but the thing is their eg.
+  ```
+   <h1>hello but why?</h1>
+  ```
+```
+  h1{
+    border: 5px solid olive;
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+    margin: 3px;
+    box-sizing: border-box;
+    display: none;
+}
+```
+  - the h1 hides from the page but it still there it uses in website page's later we use that
+  ## negative and center margin
+  - hey as we know if we write something browser gives margin to that automatically and if we think that margin given by browser is very large we can decrease by giving margin negative value eg.
+```
+<h1>hello but why?</h1>
+   <h2>hello chewengam sir</h2>
+```
+- here browser gives margin this automatically but if we think that is very big so we can decrease it by typing.
+```
+h1{
+    border: 5px solid olive;
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+    margin: 3px;
+    box-sizing: border-box;
+    margin: -20px;
+}
+```
+# margin auto eg.
+- if we make box and inside box we put heading in the center of left and right we can do that by typing margins 50% from left and right and 0 from top and bottom but in simply we write 
+```
+margin: 0                   auto;
+        top and bootom      left and right (put it in center)
+```
+## min and max width
+eg. we make abox in body then user shrinks or expand that box that much width we keep at remains same how much u shrinks or expands but at some point it becomes ugly so to control that we use.
+```
+.box{
+    min-width:60%;(it means how much u shrink the box increases from bottom but when we shrinkn more than 60% of width the box stops incresing because it becomes ugly )
+    max-width:60%;(it means how much u expand the box increases from left and right but when u expands the page ore than 60% of width it stops incresing)
+    width:400px;
+    height:300px;
+background-color:blue;
+}
+```
+## border-radius
+- it helps to change box style eg if we make box it can be sqaure or rectangle but we can control its edges by boder-radius eg.
+```
+ <div id="box">
+   </div>
+```
+```
+#box{
+background-color: magenta;
+width: 400px;
+height: 400px;
+border-radius: 50%;(it applies for all top radius right bottom left or we can use it seperately for each side eg.)
+}
+```
+- the corners of the box is the 50% of width and height eg in below pic
+![border_radius](images/borderradius.png)
+```
+border-radius: 10px 30px  40px   26px;
+               TOP  RIGHT BOTTOM LEFT
+```       
+or 
+```
+border-top-right-radius: 30px;
+border-top-left-radius: 40px;
+border-bottom-right-radius: 30px;
+border-bottom-left-radius: 30px;
+```
+## box-shadow 
+- we can make shadow for box by 
+```
+#box{
+background-color: magenta;
+width: 400px;
+height: 400px;
+border-radius: 50%;(it applies for all top radius right bottom left or we can use it seperately for each side eg.)
+box-shadow: 2px       2px        3px     cyan;
+            x axis    y axis     blur    color
+}
+```or if we have to go opposite side we can go by typing negative values 
+eg.```
+#box{
+background-color: magenta;
+width: 400px;
+height: 400px;
+border-radius: 50%;(it applies for all top radius right bottom left or we can use it seperately for each side eg.)
+box-shadow: -2px       -2px        3px     cyan;
+            -x axis    -y axis     blur    color
+}
+```
+## overflow
+- some times our text is very bigh and cant fit in our box so we use overflow eg.
+```
+overflow: scroll;(it allows us to scroll the content in the box)
+        : hideen;(it allows us to hide the content which is over flow from the box)
+        : visible;(it allows us show overflow)
+```
+or we can control overflow in axises eg.
+```
+overflow-x: hidden;
+overflow-y: scroll;
+```
+
+
+
+
+
 
 
 
