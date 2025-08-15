@@ -1393,6 +1393,7 @@ or we can control overflow in axises eg.
 overflow-x: hidden;
 overflow-y: scroll;
 ```
+**note padding applied inside and margin applied outside of margin**
 
 
 
