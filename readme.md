@@ -1325,8 +1325,8 @@ margin: 0                   auto;
 eg. we make abox in body then user shrinks or expand that box that much width we keep at remains same how much u shrinks or expands but at some point it becomes ugly so to control that we use.
 ```
 .box{
-    min-width:60%;(it means how much u shrink the box increases from bottom but when we shrinkn more than 60% of width the box stops incresing because it becomes ugly )
-    max-width:60%;(it means how much u expand the box increases from left and right but when u expands the page ore than 60% of width it stops incresing)
+    min-width:60%;(it means how much u shrink the box increases from bottom but when we shrink more than 60% of width the box stops incresing because it becomes ugly )
+    max-width:60%;(it means how much u expand the box increases from left and right but when u expands the page more than 60% of width it stops incresing)
     width:400px;
     height:300px;
 background-color:blue;

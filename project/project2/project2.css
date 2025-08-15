@@ -1,0 +1,67 @@
+body{
+    font-family: Shadows Into Light;
+    
+    
+}
+h1{
+    font-size: 21px;
+    font-weight: bolder;
+    display: inline-block;
+}
+
+li{
+    font-size: 20px;
+    display: inline-block;
+    padding: 10px;
+}
+nav{
+    display: inline-block;
+}
+li a{
+    text-decoration: none;
+    color: black;
+}
+li a:link{
+    color:black;
+}
+li a:visited{
+      color:chocolate;
+}
+li a:hover{
+   cursor: pointer;
+   color:darkgreen;
+}
+img{
+    /* display: inline-block; */
+  
+   height: 500px;
+   width: 100%;
+  
+}
+h2{
+   text-transform: uppercase;
+
+}
+.badboy{
+    display: inline-block;
+  width: 45%;
+   padding-left: 30px;
+   padding-right: 10px;
+   padding-bottom: 15px;
+}
+footer{
+    font-size: 15px;
+    width: 50%;
+    font-family: Rock Salt;
+    padding: 55px 50px 0px 200px;
+}
+#champ{
+   padding-left: 230px;
+   margin-top: 30px;
+   font-size: 17px;
+}
+#kalaruka{
+    padding-left: 230px;
+    margin: 0px 0px;
+    font-size: 15px;
+}
