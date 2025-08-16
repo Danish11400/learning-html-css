@@ -1395,9 +1395,202 @@ overflow-y: scroll;
 ```
 **note padding applied inside and margin applied outside of border**
 
+### chapter 13
+## adjacent selector eg.
+```
+<h1>hello brother</h1>
+    <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat voluptatibus nesciunt asperiores magni soluta esse quas fuga earum voluptates illo temporibus quaerat, nostrum porro, dolore optio eligendi voluptatem ipsam nemo.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem provident voluptatibus totam dignissimos iste, eveniet eligendi ratione, nam error expedita accusantium impedit sit sint consectetur quo voluptate quod tempore qui?</p>
+```
+```
+h1 + p {
+    font-style: italic;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: green;
+}
+```
+- here we type h1 + p ( means style only that one p which is after h1)
+## sibling combinators
+eg .
+```
+ <h1>hello brother</h1>
+    <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat voluptatibus nesciunt asperiores magni soluta esse quas fuga earum voluptates illo temporibus quaerat, nostrum porro, dolore optio eligendi voluptatem ipsam nemo.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem provident voluptatibus totam dignissimos iste, eveniet eligendi ratione, nam error expedita accusantium impedit sit sint consectetur quo voluptate quod tempore qui?</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque accusantium voluptate tempora illo, deserunt quis ut repellendus, quibusdam odio deleniti sequi adipisci asperiores consectetur sed eveniet totam expedita tempore velit.</p>
+```
+```
+h1 ~ p {
+    font-style: italic;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: green;
+}
+```
+- here we type h1 ~ p that means (all the paragraphs that came after h1)
+## hover we can style anthing while hover
+eg
+```
+h1:hove{
 
+}
+div:hover{
 
-
+}
+- i mean anything
+```
+and 
+```
+input:placeholder-shown{
+    color:red;
+}
+```
+## first-of-type
+eg.
+```
+li:first-of-type{
+    color:olive;
+}
+```
+means where ever li are present in that page style every 1st li from every li's
+same with last-of-type
+```
+li:last-of-type{
+    color:olive;
+}
+```
+means style every last li in the li's
+## nth-of-type
+eg.
+```
+li:nth-of-type(2){
+    color:magenta;
+}
+```
+- it style every 2nd li from each li's
+**NOTE WE HERE USING LI BUT IT CAN BE USED ON ANY OTHER ELEMENT ALSO LIKE A HOVER**
+or 
+## nth-of-type(2n)
+```
+li:nth-of-type(2n){
+    color:blue;
+}
+```
+- means in eacg li's select every 2nd then 4th then 6th like that and go on...
+(like even no.'s)
+or 
+```
+li:nth-of-type(3n){
+    color:blue;
+}
+```
+- here it selects every 3rd then 6th then 9th then go on...
+## active
+- (means at the time we use they style eg in button at the time we use they gets style) eg.
+```
+button:active{
+    color:cyan;
+}
+```
+at the moment we press the button button gets active or in use form then it gets styles little bit same as hover
+## focus eg.
+```
+input:focus{
+    colour:choclate;
+}
+```
+means when we tap on any thing means we start focus on that thing so it gets styled thats it.
+## not eg.
+```
+body:not(h1,h2,h3,h4,p){
+    border: 1px solid green;
+}
+```
+means everything in the page except those that i select in bracket style 
+## first-line eg.
+```
+p::first-line{
+    color:blue;
+}
+```
+means ist line of every paragraph or
+```
+h1::first-letter{
+    colour:red;
+}
+```
+we can also write by mixing eg.
+```
+p:first-of-type::first-letter{
+    color:blue;
+}
+```
+that mean select ehere ever paragraphs in that page select ist paragraph and from that paragraph select ist letter
+## to select placeholder text we use
+```
+input::placeholder{
+    color:magenta;
+}
+```
+## selection
+```
+p::selection{
+    color:indigo;
+}
+```
+- means when user selects any text from page from paragarph it style eg. we select a text from paragraph to copy it styles not only paragrah it can be anything that we use 
+## checked eg.
+```
+input[type="radio"]:checked{
+    box-shadow:0px 2px 3px cyan;
+}
+```
+means that radio button box we checked or selected turns into style when we check it  
+## specificity
+eg.
+```
+<h1 class="hello">hello</h1>
+```
+```
+h1{
+    color:blue;
+}
+```
+```
+.hello{
+    color:magenta;
+}
+```
+--- which one wins here what colour the text get its called specifity which is more specific wins class is more specific than elemnet i will give u table of that in below pic
+![specificity](images/specifity.png) 
+- now we know if we have elemnt selector and class selector we know class wins but what happen if we have like h1,h2, h3,div etc etc so to under stand that i will give u example from pic
+![images](images/Screenshot%202025-08-16%20081244.png)
+in this pic lets assume both select the same thing but which one wins browser starts seeing froom left side then big number came ist wins.
+__after applying specificity what wins after specifity i will give u the table of that below in a pic and thats called cascade 
+![images](images/cascade.png)  
+## cascade 
+# !important eg.
+```
+<h1 class="brick"> hello world <h1>
+```
+```
+#brick{
+    colour:blue;
+}
+```
+```
+h1{
+    color:magenta;
+}
+```
+- here we know id wins but if we add this 
+#brick{
+    colour:blue;
+}
+```
+```
+h1{
+    color:magenta !important;( then h1 wins as u see in above pic important is more big than specificity)
+}
+```
 
 
 
