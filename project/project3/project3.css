@@ -107,5 +107,8 @@ a:hover{
     cursor: pointer;
     color: blanchedalmond;
 }
+#master{
+    text-transform: capitalize;
+}
 
     
