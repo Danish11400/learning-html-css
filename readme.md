@@ -1592,6 +1592,65 @@ h1{
     color:magenta !important;( then h1 wins as u see in above pic important is more big than specificity)
 }
 ```
+### chapter 14 css units
+- i just have to know that we use measurement in css is not actual world measurements like 1cm in css is not 1cm in real world same with all like px ,mm ,etc etc i will provide u the pics of units in css below
+![cssunits](images/cssunits.png)
+![cssunits](images/units.png)
+## percentages
+- in most of the cases if we type percentage is 50% means 50 % of parent element
+- but in (line-height) it means 50% font-size of elements itself same as we write in "em"
+![percentage](images/Screenshot%202025-08-17%20104448.png)
+## rem
+- rem is used for font-size look in our browsers we have been given automatic font-size
+from the browsers[called root-font-size] which (in medium is 16px)
+- so if we apply font-size is 2 rem that means twice of root font size which is 2*16=32px
+-if we type 1rem that is 1*root font size
+-3rem that means 3*root font size ( 3 * 16=48px)
+we can also change root font size from our browser go to browser then tap on setting then font size we can also change it but 16px is best
+![rem](images/rem.png)
+## em
+- its basically related to font-size of parent element eg. if we type 1em that means 1*parent font size
+if we type 3em that means 3*parent font size 
+**"em" is same as "rem" but related to (parent element) not (root element)**
+![em](images/em.png)
+- except font-size (like rem) 2em is equal to the twice of element itself eg.
+```
+<div class="tap">
+       <div id="fix">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit enim vitae reprehenderit voluptatibus porro inventore quidem explicabo, nihil officiis nesciunt fugiat provident voluptates ab quas voluptatem at accusamus corrupti. Doloribus.</div>
+
+    </div>
+```
+```
+.tap{
+    font-size: 30px;
+}
+#fix{
+    font-size: 2em;
+    margin-left: 4em;
+}
+```
+- here i fit parent font-size 30px
+- then i make child font-size 2em(that means 2 * parent font size(30px) = 60px)
+- then in child i make margin 4em that means (4 * size of element itself which is 60px = 240px of margin from left)
+- beacuse we know other than font-size in em size is taken from element itself
+## vw and vh
+- vw is the viewport width 
+- vh is viewport height
+- viewport means (the one screen we view )
+if we write width:100vw
+           height:100vh
+- means 100% of screen we view at a time
+![vw&vh](images/vw&vh.png)
+## float
+![float](images/float-none.png)
+![float](images/float-left.png)
+![float](images/float-right.png)
+
+
+
+
+
+
 
 
 
