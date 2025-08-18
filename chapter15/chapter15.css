@@ -1,0 +1,19 @@
+div{
+    color: white;
+    border: 3px solid black;
+    width: 600px;
+    height: 100vh;
+   background-image:url(../images/woman.jpg);
+   background-size: cover;
+   filter:hue-rotate(180deg);
+}
+
+
+
+ /* background-image: url("../images/people.jpg"); */
+    /* background-repeat: repeat-y; */
+/* background-size: cover;
+background-position: top right;
+background-position: top left;
+background-position: bottom left;
+background-position: bottom right; */

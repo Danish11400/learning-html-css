@@ -1645,6 +1645,179 @@ if we write width:100vw
 ![float](images/float-none.png)
 ![float](images/float-left.png)
 ![float](images/float-right.png)
+### chapter 15
+## background-images
+- we can add images in the background eg.
+```
+<main>
+        <div class="tap">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis deleniti praesentium alias, porro dolorum quaerat, voluptatum magni repellat nulla iure odio commodi, voluptatem optio explicabo temporibus illo aut asperiores mollitia!</div>
+    </main>
+```
+```
+div{
+    border: 1px solid red;
+    width: 300px;
+    height: 300px;
+    background-image: url("../images/peacock.png");
+}
+```
+- we can also add more images at the same time with comma and we can add images from browser
+## background-repeat
+- as we seen in upper side image is very short than the width & height we give the element so image repeats himself to fill the container to control that we can use
+```
+div{
+    border: 1px solid red;
+    width: 300px;
+    height: 300px;
+    background-image: url("../images/peacock.png");
+     background-repeat: no-repeat;
+                      : repeat-x;(for repeat in a axis)
+                      : repeat-y;(for repeat in y axis)
+}
+
+```
+## background-size
+- we can control image size eg
+```
+div{
+    border: 1px solid red;
+    width: 300px;
+    height: 300px;
+    background-image: url("../images/people.jpg");
+    /* background-repeat: repeat-y; */
+background-size: contain;(here it makes actual image size without shrinking or expanding it and if the container is too big then it starts repeating the image then if we put repeat is no-repeat then in the container have some space where it repeates)
+}
+```
+```
+background-size: cover;( in this it didnt shrink and expand also but it wants to cover all the container by the image and if container is not fit for image some  part of image deletes and it didnt repeat the image )
+we can also use percentages to image also
+background-size: 100%
+```
+## background-position
+if we cover the image and it didnt fit in the container and it cuts our part of image that part was the main part and unman part is shown then we can position it eg .
+```
+background-position: top; ( that means our top part should be seen and bottom should cut)
+we also have bottom,right,left,center
+```
+or 
+```
+background-size: cover;
+background-position: top right;(means top and right should be seen and left and bottom should be cutted)
+background-position: top left;
+background-position: bottom left;
+background-position: bottom right;
+```
+## background-clip
+- if we have big border sometimes then images some part goes inside it at ends
+and we dont want that we just want that images dididnt go inside border we want omly that image go till padding after padding border starts and image should stop their so we use
+```
+div{
+    background-clip: padding-box;(till padding)
+    background-clip:content-box;(border didnot go to padding nor border because it stop at content box)
+    background-clip: border-box;(in this images stops at border means image goes inside border box)
+}
+```
+## linear-gradient
+```
+div{
+    border: 3px solid black;
+    width: 400px;
+    height: 400px;
+   background-image: linear-gradient(cyan, magenta,olive);
+}
+
+```
+result ![linear](images/linear.png)
+we can also make changes like
+```
+div{
+    border: 3px solid black;
+    width: 400px;
+    height: 400px;
+   background-image: linear-gradient( 45deg,cyan, magenta,olive);
+}                                       
+                                        ( here 45deg means start from 45degree from the horizontal or any angle we can use )
+
+```
+or we can also use direct cmnds like
+```
+background-image: linear-gradient(to bottom right, cyan, magenta,olive);
+                                     (means starts from top left and ends to bottom right other comands are also same )
+```
+we can also control width of colors like
+```
+ background-image: linear-gradient(to bottom right, cyan 20%, magenta 10%,olive 70%);
+ here i am not saying that cyan is 20% i am saying that cyan starts at 20% magenta starts at 10% and after 70% olive starts (percentage here is at what percentage of the container that color starts or begin)
+```
+## radio-gradient
+in this we can make gradient from center to outward eg
+```
+background-image: radial-gradient(cyan, green);
+```
+and we can control this with cmnds
+```
+background-image: radial-gradient(circle, cyan, green);
+background-image: radial-gradient(ellipse, cyan, green);
+background-image: radial-gradient( circle at bottom, cyan, green); same as many cmnds
+```
+## conic-gradient
+```
+background-image: conic-gradient( cyan , blue)
+```
+##### also if we need any gradient go any webpage or mdn the gradient u think is best copy the code no need to master this
+
+## repeating-linear-gradient
+```
+ background-image: repeating-linear-gradient(to bottom right, cyan , magenta ,olive 10%);
+   it repeates the gradient again then and the 10% here means it repeates 10times
+```
+## filter
+- it didnt only applies to bavkground image sit also apply images which is not backgroung eg.
+```
+div{
+    color: white;
+    border: 3px solid black;
+    width: 600px;
+    height: 100vh;
+   background-image:url(../images/woman.jpg);
+   background-size: cover;
+   filter: blur(5px);
+}
+```
+and the result is ![filter](images/filter.png)
+and more the px in blur more the blur also their are some more properties in filter like
+```
+div{
+    color: white;
+    border: 3px solid black;
+    width: 600px;
+    height: 100vh;
+   background-image:url(../images/woman.jpg);
+   background-size: cover;
+   filter: grayscale(100%);(it makes image grey)
+}
+```
+```
+div{
+    color: white;
+    border: 3px solid black;
+    width: 600px;
+    height: 100vh;
+   background-image:url(../images/woman.jpg);
+   background-size: cover;
+   filter:contrast(150%);[makes image contrast]
+}
+```
+### note 100% is normal means if greyscaleis 100% means normal grey and 100% contrast means above than 100% is we increase and less than 100% is we decreasing 
+
+## heu-rotate
+```
+   filter:hue-rotate(180deg);[ means it converts the image in negative more degree till 180 degree it increses towards normal to negative and then after increasing after 180 degree it means it going from negative to normal like 180 is full negative and 0 and 360 is normal]
+```
+we also have saturation and others etc etc.
+
+
+### chapter 16
 
 
 
