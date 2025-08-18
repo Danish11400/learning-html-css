@@ -1814,7 +1814,7 @@ div{
 ```
    filter:hue-rotate(180deg);[ means it converts the image in negative more degree till 180 degree it increses towards normal to negative and then after increasing after 180 degree it means it going from negative to normal like 180 is full negative and 0 and 360 is normal]
 ```
-we also have saturation and others etc etc.
+we also have saturation,brightness,opacity  and many more which vs code give us options etc etc.
 
 
 ### chapter 16
