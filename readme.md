@@ -1772,7 +1772,7 @@ background-image: conic-gradient( cyan , blue)
    it repeates the gradient again then and the 10% here means it repeates 10times
 ```
 ## filter
-- it didnt only applies to bavkground image sit also apply images which is not backgroung eg.
+- it didnt only applies to background image sit also apply images which is not backgroung eg.
 ```
 div{
     color: white;
@@ -1817,7 +1817,122 @@ div{
 we also have saturation,brightness,opacity  and many more which vs code give us options etc etc.
 
 
-### chapter 16
+### chapter 16 positioning
+the values of position 
+```
+position:static;
+position:relative;
+position:absolute;
+position:fixed;
+position:sticky;
+```
+## static
+![static](images/static.png)
+
+## relative
+![relative](images/relative.png)
+eg.
+```
+<body>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui aspernatur ex enim? Inventore quaerat incidunt sed minus. Doloribus molestiae totam quo ut quia nesciunt dicta fugiat omnis, natus nisi aspernatur!</p>
+    <p class="bro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis quod animi maiores praesentium inventore sint nam pariatur earum tempora sunt voluptas distinctio unde hic voluptates perspiciatis corrupti, accusantium odio reprehenderit.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam repudiandae fugit omnis qui placeat minus quam a error facere dignissimos! Dicta quod eveniet sunt id architecto culpa alias modi non!</p>
+</body>
+```
+```
+p{
+    border: 1px solid black;
+    background-image: linear-gradient(cyan, yellow, magenta);
+    width: 300px;
+    height: 200px;
+}
+.bro{
+    background-image: linear-gradient(olive, grey, purple, green);
+    position: relative;
+    top: 40px;
+    left: 50px;
+}
+```
+the result ![result-of-relative](images/result_relative.png)
+- but remember it also takes its place that it is ist in relative as i defined it in relative pic
+## z-index
+- z-index applies on that element that is been positioning anything except "static"
+z- index is a number that tells which thing comes over on what thing
+- i mean the element have more z-inde comes over the element have less z-index eg.
+```
+p{
+    border: 1px solid black;
+    background-image: linear-gradient(cyan, yellow, magenta);
+    width: 300px;
+    height: 200px;
+    position: relative;
+    z-index: 2;
+}
+.bro{
+    background-image: linear-gradient(olive, grey, purple, green);
+    position: relative;
+    top: 40px;
+    left: 50px;
+    z-index: 1;
+}
+```
+look here 2nd paragraph have less z index than other 2 so it the 3rd paragraph came over 2nd [ist also can came over but here it is awayfrom 2nd] and look here we use position relative in both not static if we have used static z-index didnt work then.
+result ![z-index](images/z-index.png)
+## absolute
+![absolute](images/aboslute.png)
+- in this case if we apply absolute the space didint preserve this time it is taken by another element and it starts from the start means from the root html document the webpage eg.
+```
+p{
+    border: 1px solid black;
+    background-image: linear-gradient(cyan, yellow, magenta);
+    width: 300px;
+    height: 200px;
+   display: inline-block;
+}
+.bro{
+    background-image: linear-gradient(olive, grey, purple, green);
+    position: absolute;
+    top: 40px;
+    left: 50px;
+
+}
+```
+result ![absolute-result](images/absoulte-result.png)
+- here what happen is the space preserved in relative is unpreserved in absolute
+so we apply absolute here means there is no space provided for the element in ehich we apply and then we start applying top,left,bottom,right [these are applying from the begining of webpage or root html document]
+# and if the parent of something is positioning other than static and then the child is positioning absolute then we apply top bottom left right the chils starts from the begining of its parent not from root html document or the start of webpage from the begining of its parent and can only move into the parent area eg.
+```
+<main>
+    <p></p>
+    <p class="bro"> hello buddy!<p>
+    <p></p>
+    </main>
+```
+```
+main{
+    border: 1px solid black;
+    background-image: linear-gradient(cyan, yellow, magenta);
+    width: 300px;
+    height: 200px;
+   display: inline-block;
+   position: relative;
+}
+.bro{
+    background-color: black;
+    color: aliceblue;
+    position: absolute;
+    top: 40px;
+    left: 50px;
+}
+```
+- here parent is main and we apply other position except static we apply relative on parent then on .bro is child we apply absolute now see in result pic it starts from its parent begining and can only moves in his parent are only eg. if we apply right = 0 then it goes on the right side of parent area not the root html document.(because he is bind to parent child relation ship)
+and except parent child if we apply right =0 it goes to right side of webpage because then he is open he cant bound in parent child relationship
+![result-parent-child-absolut](images/absolute-2-result.png)
+## fixed
+- in this the element positio we make fixed remains at their place even we scrol up but it remains that place where we applied it 
+![fixed](images/fixed.png)
+
+
 
 
 

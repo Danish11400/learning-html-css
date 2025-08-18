@@ -1,0 +1,59 @@
+/* main{
+    border: 1px solid black;
+    background-image: linear-gradient(cyan, yellow, magenta);
+    width: 300px;
+    height: 200px;
+   display: inline-block;
+   position: relative;
+}
+.bro{
+    background-color: black;
+    color: aliceblue;
+    position: absolute;
+    top: 40px;
+    left: 50px;
+
+} */
+ body{
+    margin: 0;
+    padding: 0;
+    background:radial-gradient(cyan, blue);
+ }
+ 
+div{
+   
+    height: 100px;
+    width: 200px;
+    border: 3px solid white;
+/* text-align: center; */
+position: relative;
+display: inline-block;
+margin-left: 45%;
+margin-top:350px ;
+
+}
+.tap{
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    /* padding-top: 30px; */
+    display: inline-block;
+padding: 15px 30px;
+}
+.hello{
+    color: white;
+    border: 3px solid white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    top: -30px;
+    right: -20px;
+    background-color: green;
+    padding: 5px 10px;
+}
+.tap:hover{
+    opacity: 0.7;
+}
