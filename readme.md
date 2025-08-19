@@ -2162,6 +2162,75 @@ streches or expands in z axis only
  }
 ```
 here it starts transform(rotate,translate) from top point towards left side.
+### chapter 18 flexbox part1
+- just to use place space and put thing away like we do it with margins and float now flex box made us that easier and **personally i am so excited for to use this**
+## introduction to flexbox
+to use flexbox properties on any element we have to put display:flex; ist then we can use
+## flex-direction
+- use to give our elements a direction eg.
+```
+.container{
+    border: 2px solid black;
+    width: 1200px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: row;
+}
+.box{
+    width: 150px;
+    height: 150px;
+    font-size: 4rem;
+    text-align: center;
+}
+```
+or we can reverse that by 
+```
+.container{
+    border: 2px solid black;
+    width: 1200px;
+    margin: 40px auto;
+    display: flex;
+     flex-direction: row-reverse;
+}
+.box{
+    width: 150px;
+    height: 150px;
+    font-size: 4rem;
+    text-align: center;
+}
+```
+*in column direction*
+```
+.container{
+    border: 2px solid black;
+    width: 1200px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+}
+.box{
+    width: 150px;
+    height: 150px;
+    font-size: 4rem;
+    text-align: center;
+}
+```
+*reverse column*
+```
+.container{
+    border: 2px solid black;
+    width: 1200px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.box{
+    width: 150px;
+    height: 150px;
+    font-size: 4rem;
+    text-align: center;
+}
+```
 
 
 
