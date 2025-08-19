@@ -2300,7 +2300,82 @@ h1{
     font-size: 6rem;
 }
 ```
+**NOTE IF WE SELECT FLEX-DIRECTION=ROW MAIN AXIS IS NOW LEFT TO RIGHJT AND CROSS AXIS IS NOW TOP TO BOTTOM**
+**AND IF WE SELECT COLUMN MAIN AXIS IS NOE TOP TO BOTTOM AND CROSS AXIS IS NOW LEFT TO RIGHT**
+and what we read in flex box till now is for main axis after this is for cross axis
+## align-item
+- helps us in cross axis eg.
+```
+.container{
+    border: 2px solid black;
+    width: 1200px;
+    margin: 40px auto;
+    display: flex;
+    align-items: center;
+}
+.box{
+    width: 150px;
+    height: 150px;
+    font-size: 4rem;
+    text-align: center;
+              : flex-start;
+              : flex-end;
+              : strech:
+              [but only in cross axis]
+}
+```
+- it will center the content in the cross axis
 
+## align-content [*won't do anthing if we dont have activate wrap*]
+hey when we wrap the content it creates lot of space between and we dont want that and we also want to align our content we can also do that with align-items but the space between our content which wrap make is not closed so we use align-content to align things and end our space also.
+```
+.container{
+    border: 2px solid black;
+    width: 1200px;
+    height: 1000px;
+    margin: 40px auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-content:center;
+                 : flex-start;
+                 : flex-end;
+                 : space-between;
+}
+.box{
+    width: 350px;
+    height: 300px;
+    font-size: 4rem;
+    text-align: center;
+}
+```
+## align-self{also uses in cross axis}
+- do same thing as justify-content but for a particular one eg when we use flex box it use people for whole thing but foe one thing whichh we call odd one out we call it align-self not justify-content becoz if we type ```justify-content:flex-start``` it will start from the container not from this axis  for that it will in ```align-self:flex-start```it will start from his cross axis.
+```
+.container{
+    border: 2px solid black;
+    width: 1200px;
+    height: 500px;
+    margin: 40px auto;
+    display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.box{
+    width: 150px;
+    height: 150px;
+    font-size: 4rem;
+}
+h1{
+    font-family: sans-serif;
+    font-size: 6rem;
+}
+.cup{
+    align-self: flex-start;
+            : flex-end;
+            : strech;
+            :center;
+}
+```
 
 
 

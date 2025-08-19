@@ -1,18 +1,21 @@
 .container{
     border: 2px solid black;
     width: 1200px;
+    height: 500px;
     margin: 40px auto;
     display: flex;
-    justify-content:flex-end;
+   justify-content: center;
+   align-items: center;
 }
 .box{
     width: 150px;
     height: 150px;
     font-size: 4rem;
-    text-align: center;
 }
 h1{
     font-family: sans-serif;
-    text-align: center;
     font-size: 6rem;
+}
+.cup{
+    align-self: flex-start;
 }
