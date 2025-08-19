@@ -1932,6 +1932,239 @@ and except parent child if we apply right =0 it goes to right side of webpage be
 - in this the element positio we make fixed remains at their place even we scrol up but it remains that place where we applied it 
 ![fixed](images/fixed.png)
 
+### chapter17 transation and transforms
+## the transation syntax
+- transition syntax image ![transatin-syntax](images/transition-syntax.png)
+transitinon: <property> <duration> <timing-funcation> <duration>
+eg.
+```
+<body>
+    <a href="">hover me!</a>
+</body>
+```
+```
+a{
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+a:hover{
+    background-color: orchid;
+}
+```
+- now when we hover it imediately changes color and when we not hover it also sudenly gets normal color but if we add transation
+```
+a{
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 30px;
+    margin-left: 50px;
+    transition: background-color 3s;
+}
+a:hover{
+    background-color: orchid;
+}
+```
+- look this time i add tranation in direct link not in hover it means it tells browser that whenever background colou changes it should take 3 sec i mean ( when we hover it takes 3 sec and when we remove cusor means[dehover] it takes 3 sec but what if we add transition in hover look )
+```
+a{
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 30px;
+    margin-left: 50px;
+    
+}
+a:hover{
+    background-color: orchid;
+    transition: background-color 3s;
+}
+```
+- here we add transition in hover means when background color changes in hover it takes 3 sec but when we dehover it suddenly goes normal becoz we add transition only in hover broo..[and this isint good thing broo becoz user needs smooth interface]
+## multiple transition properties
+```
+a{
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 30px;
+    margin-left: 50px;
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
+     transition: background-color 3s, color 2s, text-decoration 3.5s, font-family 3s;
+}
+a:hover{
+    background-color: orchid;
+    color:white;
+    text-decoration: overline red;
+    font-family: cursive;
+}
+```
+- look here how many transations i add in this ..
+## timing-function
+- in this we canm add speed eg.
+if we type```ease-out``` it starts quickly and slows down
+if we type ```ease-in```it starts slowlu and speeds up
+if we type ```linear```it moves in constant speed eg.
+```
+a{
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 30px;
+    margin-left: 50px;
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
+     transition: transform 10s ease-out;
+}
+a:hover{
+    background-color: orchid;
+    color:white;
+    text-decoration: overline red;
+    font-family: cursive;
+    transform: translateX(100px);
+}
+```
+dont worry about transforms here we read it in next lectures 
+## transition delay
+```
+a{
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 30px;
+    margin-left: 50px;
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
+     transition: background-color 3s ease-in 5s;
+}
+a:hover{
+    background-color: orchid;
+    color:white;
+    text-decoration: overline red;
+    font-family: cursive;
+    
+}
+```
+- here look i put delay 5 sec that means when i hover ist it takes to 5 sec of delay  then starts changing style that we put and then when we dishover it takes 5 sec of delay then starts changing style that we put..
+## transforms
+## translate
+- used to move things away without using margin eg.
+```
+ <div id="box"></div>
+```
+```
+ #box{
+    width: 100px;
+    height: 100px;
+    background-color: orchid;
+    transform: translateX(500px);
+    transform: translateY(50%)  [means 50percentent of width we can use px % and negative values also]
+ }
+```
+translate in x means go away in x direction by 500px
+## rotate 
+- we can make things rotate eg.
+```
+ #box{
+    width: 100px;
+    height: 100px;
+    background-color: orchid;
+    transform: translateX(500px);
+    transform: rotate(45deg);
+ }
+```
+we can conteol it seperately eg.
+```
+ #box{
+    width: 100px;
+    height: 100px;
+    background-color: orchid;
+    transform: translateX(500px);
+    transform: rotateX(45deg);
+ }
+```
+- here we rotate it in x axis like a **horizontal cylinder** rotates
+```
+ #box{
+    width: 100px;
+    height: 100px;
+    background-color: orchid;
+    transform: translateX(500px);
+    transform: rotateY(45deg);
+ }
+```
+- here it rotates in y direction like a **vertical cylinder** rotates
+```
+ #box{
+    width: 100px;
+    height: 100px;
+    background-color: orchid;
+    transform: translateX(500px);
+    transform: rotateZ(45deg);
+ }
+```
+- here it rotates in z direction 
+## scale 
+- in simple use to make thing strech and expand and value=1 is normal eg.
+```
+ #box{
+    width: 100px;
+    height: 100px;
+    background-color: orchid;
+    transform: translateX(500px);
+    transform: scale(0.2);
+ }
+```
+- here i put scale is 0.2 so its gonna strech
+- we can use it seperately also eg.
+```
+ #box{
+    width: 100px;
+    height: 100px;
+    background-color: orchid;
+    transform: translateX(500px);
+    transform: scaleX(0.2);
+ }
+```
+- straches and expands in x axis only
+```
+ #box{
+    width: 100px;
+    height: 100px;
+    background-color: orchid;
+    transform: translateX(500px);
+    transform: scaleY(0.2);
+ }
+```
+- streches and expands in y axis only
+```
+ #box{
+    width: 100px;
+    height: 100px;
+    background-color: orchid;
+    transform: translateX(500px);
+    transform: scaleZ(0.2);
+ }
+```
+streches or expands in z axis only
+### transform-origin
+- used to tell us from what point transform applies eg we we rotate any element but at what point it gonna rotate we select that with origin eg.
+![transform-origin](images/Screenshot%202025-08-19%20124337.png)
+```
+ #box{
+    width: 100px;
+    height: 100px;
+    background-color: orchid;
+    transform-origin: top left;
+    transform: translate(100px);
+     transform: rotate(45deg);
+ }
+```
+here it starts transform(rotate,translate) from top point towards left side.
+
+
+
 
 
 
