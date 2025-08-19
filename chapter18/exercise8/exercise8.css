@@ -9,6 +9,9 @@ body{
 .tap{
     display: flex;
     flex-direction: column;
+    width: 400px;
+    height: 400px;
+    justify-content:space-around;
     
 }
 .hello{

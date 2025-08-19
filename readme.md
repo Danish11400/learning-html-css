@@ -2231,6 +2231,79 @@ or we can reverse that by
     text-align: center;
 }
 ```
+## flex-wrap
+eg. if we have 1000px width of conatiner and 1000px height of container
+then we make our elements 300px each we have 6 elements in our code
+so 6 becomes 1800px and they cant fix in container so they shrink them selves and fit in the con tainer to solve that problem we use flex-wrap:wrap; means it can make them wrap in the container and make them of their perfect size that we have given them eg.
+look they wrap and be their own size which we gave them
+![wrap](images/wrap) here we type wrap like
+```
+.container{
+    border: 2px solid black;
+    width: 1200px;
+    height: 1200px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+}
+.box{
+    width: 300px;
+    height: 300px;
+    font-size: 4rem;
+    text-align: center;
+}
+```
+before they fit in the container and not of their size withpout using wrap look 
+![withoutwrap](images/Screenshot%202025-08-19%20160740.png) here we use no wrap
+```
+.container{
+    border: 2px solid black;
+    width: 1200px;
+    height: 1200px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+}
+.box{
+    width: 300px;
+    height: 300px;
+    font-size: 4rem;
+    text-align: center;
+}
+```
+## justify-content
+- so used for where ever we want to put our contyent it can make it their in their container and it has many options
+```
+.container{
+    border: 2px solid black;
+    width: 1200px;
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-between;
+                   : space-around;
+                   : center;
+                   :end;
+                   :start;
+                   :space-evenly;
+}
+.box{
+    width: 150px;
+    height: 150px;
+    font-size: 4rem;
+    text-align: center;
+}
+h1{
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 6rem;
+}
+```
+
+
+
+
 
 
 
