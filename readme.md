@@ -1858,7 +1858,7 @@ the result ![result-of-relative](images/result_relative.png)
 ## z-index
 - z-index applies on that element that is been positioning anything except "static"
 z- index is a number that tells which thing comes over on what thing
-- i mean the element have more z-inde comes over the element have less z-index eg.
+- i mean the element have more z-index comes over the element have less z-index eg.
 ```
 p{
     border: 1px solid black;
@@ -2274,7 +2274,7 @@ before they fit in the container and not of their size withpout using wrap look
 }
 ```
 ## justify-content
-- so used for where ever we want to put our contyent it can make it their in their container and it has many options
+- so used for where ever we want to put our content it can make it their in their container and it has many options
 ```
 .container{
     border: 2px solid black;
