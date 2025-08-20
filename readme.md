@@ -2349,7 +2349,7 @@ hey when we wrap the content it creates lot of space between and we dont want th
 }
 ```
 ## align-self{also uses in cross axis}
-- do same thing as justify-content but for a particular one eg when we use flex box it use people for whole thing but foe one thing whichh we call odd one out we call it align-self not justify-content becoz if we type ```justify-content:flex-start``` it will start from the container not from this axis  for that it will in ```align-self:flex-start```it will start from his cross axis.
+- do same thing as justify-content but for a particular one eg when we use flex box it use people for whole thing but for one thing which we call odd one out we call it align-self not justify-content becoz if we type ```justify-content:flex-start``` it will start from the container not from this axis  for that it will in ```align-self:flex-start```it will start from his cross axis.
 ```
 .container{
     border: 2px solid black;
@@ -2376,6 +2376,30 @@ h1{
             :center;
 }
 ```
+#### chapter 19
+### flex part2 
+## we write flex in the format of flex: <flex-grow> <flex-shrink> <flex-basis>
+
+## flex-grow
+![flex-grow](images/grow.png)
+## flex-shrink
+![shrink](images/shrink.png)
+## flex-basis
+- it also set the item width but it works differnet with width element in the sence like if we change direction to columns it goes for height and if we change direction to row it goes for width eg
+```
+flex-basis: 1000px;
+```
+- we can set flex-grow flex-shrink and flex-basis at same line like
+```
+flex: 1 2 100px;
+```
+## order
+- we can change order of elemwnts by ``` order: 2; [any no. actually]
+- this is a flex based property.
+#### best lecture to revise flexbox is in flex-box part 2 lec.6 lect.7 lect.8 and lect.9
+
+
+
 
 
 
