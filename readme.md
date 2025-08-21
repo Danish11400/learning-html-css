@@ -2397,6 +2397,40 @@ flex: 1 2 100px;
 - we can change order of elemwnts by ``` order: 2; [any no. actually]
 - this is a flex based property.
 #### best lecture to revise flexbox is in flex-box part 2 lec.6 lect.7 lect.8 and lect.9
+### chapter20 responsive designs
+## media query
+-![mediaquery](images/Screenshot%202025-08-21%20103441.png)
+-![mediaquery](images/Screenshot%202025-08-21%20103512.png)
+-![mediaquery](images/Screenshot%202025-08-21%20110824.png)
+eg.
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="chapter20.css">
+</head>
+<body>
+    <h1>Media Query</h1>
+</body>
+</html>
+```
+```
+body{
+    background-color: brown;
+}
+@media (max-width:800px){
+    body{
+        background-color: cyan;
+    }
+}
+```
+that tells the browser that our width is 100% and then the color is brown but when our width shrinks till 800px (max-width) then change the background color.
+for min-width when our color is cyan for less than 800px but when our width expands more than 800px our background turns into brown
+
+
 
 
 

@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(233, 223, 255);
+  background:conic-gradient(magenta,orchid,pink);
   font-family: "Open Sans", sans-serif;
   display: flex;
   flex-direction: column;
@@ -15,7 +15,7 @@ h1 {
 }
 
 .container {
-  background-color: white;
+  background: radial-gradient(yellow, cyan);
   width: 100%;
   max-width: 900px;
   box-sizing: border-box;
