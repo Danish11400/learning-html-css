@@ -2394,7 +2394,7 @@ flex-basis: 1000px;
 flex: 1 2 100px;
 ```
 ## order
-- we can change order of elemwnts by ``` order: 2; [any no. actually]
+- we can change order of elements by ``` order: 2; [any no. actually]
 - this is a flex based property.
 #### best lecture to revise flexbox is in flex-box part 2 lec.6 lect.7 lect.8 and lect.9
 ### chapter20 responsive designs
@@ -2429,6 +2429,99 @@ body{
 ```
 that tells the browser that our width is 100% and then the color is brown but when our width shrinks till 800px (max-width) then change the background color.
 for min-width when our color is cyan for less than 800px but when our width expands more than 800px our background turns into brown
+## only
+![only](images/Screenshot%202025-08-21%20142427.png)
+## screen
+![screen](images/Screenshot%202025-08-21%20142524.png)
+eg.
+```
+<h1>hello<h1>
+```
+```
+@media only print{
+    h1{
+        font-size: 10rem;
+    }
+}
+```
+- that means our size remains 3 rem only but when we going to print that its size automatically goes 10rem.
+and if we  use screen it gives 10rem on screen.
+## and 
+![and](images/Screenshot%202025-08-21%20143337.png)
+- so the real format is this
+```
+@media only screen and  (max-width:800px){
+    body{
+        background-color: cyan;
+    }
+}
+```
+- in media query we can use min and max width and height and we can use orientation:landscape or portrait and the 3rd one is resolution and i will give u example
+![resolution](images/Screenshot%202025-08-21%20144705.png)
+## or logical operator to join eg.
+```
+@media  (max-width:600px) or (min-width:1500px) {
+    body{
+        background-color: cyan;
+    }
+}
+```
+we use "or logic gate here " not and and its says [max-width] when widths shrinks more than 600px then color is cyan and [min-width] says when width extends more than 1500px it turns cyan and both join them togeather is or gate.   we can use only one gate in one *@media*
+## meia query level 4
+- for height and width we can use also lessthan equal to or greaterthan equalto eg.
+```
+ @media (width<= 800px) or (width>=1200px){
+    body{
+        background-color: orchid;
+    }
+ }
+```
+**but level 4 not supported in all browsers so try to use min and max most of the time**
+## so now we know how to make our site flexible for all type of devices but now we know about how many px are great for mobile for ipad for laptop etc etc.
+## for mobile its break point width is (0 to 480px) best
+## for tablets its break point width is (481px to 768px)
+## for large desktop its break point width is (1025px to up)
+eg for mobile.
+```
+@media only screen and (max-width: 480px){
+     body{
+        background-color: olive;
+     }
+     h1{
+        font-style: italic;
+     }
+
+  }
+```
+- for table
+```
+ @media only screen  and (max-width: 480px){
+     body{
+        background-color: olive;
+     }
+     h1{
+        font-style: italic;
+     }
+
+  }
+  @media only screen  and (min-width: 481px) and  (max-width: 768px){
+     body{
+        background-color: magenta;
+     }
+     h1{
+        font-style: italic;
+     }
+
+  }
+```
+- here we add phone and tablet also because our website should open on any thing ans sam as desktop....
+###### look folder 23 and lect.9 and lect.10 is best till here. to fully under stand media queries.
+### desktop first and mobile first
+- in desktop ist we make website for dektop then we resize it with @media query to make for mobile. 
+- mobile first we make website for mobile then we resize it with @media query to make it for desktop.
+
+
+
 
 
 

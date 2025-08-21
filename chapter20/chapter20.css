@@ -1,8 +1,39 @@
-body{
+/* body{
     background-color: brown;
 }
-@media (max-width:800px){
+@media  (max-width:600px) or (min-width:1500px) {
     body{
         background-color: cyan;
     }
 }
+h1{
+    font-size: 3rem;
+}
+@media only print{
+    h1{
+        font-size: 10rem;
+    }
+} */
+ /* @media (width<= 800px) or (width>=1200px){
+    body{
+        background-color: orchid;
+    }
+ } */
+  @media only screen  and (max-width: 480px){
+     body{
+        background-color: olive;
+     }
+     h1{
+        font-style: italic;
+     }
+
+  }
+  @media only screen  and (min-width: 481px) and  (max-width: 768px){
+     body{
+        background-color: magenta;
+     }
+     h1{
+        font-style: italic;
+     }
+
+  }
