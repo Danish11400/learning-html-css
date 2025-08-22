@@ -2575,6 +2575,58 @@ or
 gap: 20px        30px;
     rows gap     column gap
 ```
+### chapter 22 grid part2 
+## grid lines 
+- we can see grid lines in inspect in layouts every line has its no. in each rows and columns we can use those no.s to change in our styles in our next lectures in this we study just lines no. and how to see lines 
+![grid-lines](images/grid-lines.png)
+## psitioning grid items
+- we can position grid items by directly giving comand to child not parent using grid lines eg.
+```
+<div class="container">
+        <div class="box hello" style="background-color:teal ;">first</div>
+</div>
+```
+```
+.hello{
+    grid-column-start: ;
+    grid-column-end: ;
+    grid-row-start: ;
+    grid-row-end: ;
+}
+```
+- look its here in directly in child not parent in those comnads we can take grid lines no.'s where we want to put and in layouts we can see grid lines no.s eg.
+eg.
+```
+.hello{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start:2 ;
+    grid-row-end: 4;
+}
+```
+- here we put values in them noe check the result in below mentioned picture
+![grid-position](images/grid-position.png)
+## the span key word
+- we can say diectly where to end . it doesnt mean it goes from lines it means in cells how many cells we have to go. eg.
+```
+.hello{
+    grid-column-start:1 ;
+    grid-column-end:span 3;
+    grid-row-start:1 ;
+    grid-row-end:span 3;
+}
+```
+- here is the result ![span-result](images/span-reslut2.png)
+- look here it moves 3 colums and 3 rows with span but if we have to do it without span then we use 
+```
+.hello{
+    grid-column-start:1 ;
+    grid-column-end: 4;
+    grid-row-start:1 ;
+    grid-row-end:4;
+}
+```
+- because in span we didint call him to move to 4th line we call him to move 4 cells which is line 5th.
 
 
 
