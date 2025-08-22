@@ -2523,7 +2523,7 @@ eg for mobile.
 ## enabling css grid
 - to enable grid we use just ```diaplay:grid;```
 or ```display:inline-grid;``` to also make it inline we use it like flex we apply it to parent then it applies on childs.
-## gris columns
+## grid columns
 - to make columns in grid we use``` grid-template-columns: 1fr 1fr 1fr 1fr;``` 1fr means 1 fraction we can also increases columns width by feactions we can write ``` 1fr 2fr 1fr``` that means 2nd column shouls have 2 fractions.
 ## grid rows
 - to make rows in grid we use ```grid-template-rows: 1fr 3fr 1fr ;``` .
@@ -2627,11 +2627,96 @@ eg.
 }
 ```
 - because in span we didint call him to move to 4th line we call him to move 4 cells which is line 5th.
-
-
-
-
-
+ ## grid-area short hand property
+ - we dont need to type all like grid-column-start and end in simple we type
+ ```
+grid-column: 1 /      span 3;
+            start     end
+same in row
+grid-row: 1 /     2
+         start/   end
+ ```
+ ## naming our grid lines
+ ![naming-grid-line](images/gridnamingline.png)
+ eg.
+ ```
+  grid-template-columns: [line-1-start] 1fr [line-2-start] 1fr;
+ ```
+ look at the result now
+ ![name-columns](images/Screenshot%202025-08-22%20145441.png)
+ - now we can use these names in positioning eg.
+ ```
+.hello{
+    grid-column-start: line1;
+    grid-column_end : line 2;   { the names we put the lines}
+}
+ ```
+ - and same as rows
+ ## grid-template-area
+- here we cam actually make our own grid cells like how we want eg.
+```
+grid-template-areas: 
+    "a a c"
+    "b b c";
+```
+- look here a is just name means a a in two rows means this cell is two rows
+- b b in two rows means this cell is also two rows under a
+- c
+  c means two c in two columns means this cell is of two colums in the right side of a and b. i will show u pic of result also.
+  ![grid-template-area](images/Screenshot%202025-08-22%20150912.png)
+  - we can use these cells with their name a b and c eg.
+```
+.hello{
+    grid-area: c;
+}
+```
+  - telling now hello item that u are noe assigned to cell c
+  - we can use any name in place of a ,b, c but abc is best and simple
+  ## grid-template-area with colums and rows
+  eg.
+```
+grid-template-columns: 1fr 200px 1fr;
+    grid-template-rows: 1fr 3fr 100px;
+```
+- here we make 3 rows and three columns
+- so now we have to make 3 alphabet rows and 3 alphabet columns in grid-template-area
+otherwise space remaing empty if we have in colums 2 and in rows 4 we can make then eg.
+```
+a b
+a c
+a c
+a c
+```
+- so we have to match the columns and rows here.
+## grid-auto-flow
+- in this we select how our content behaves in grid like
+```
+grid-auto-flow: row;
+eg. if we have 3 rows and 4 columns our content goes in the direction
+1 2 3 4
+5 6 7 8
+9 10 11 12
+```
+```
+grid-auto-flow: column;
+eg. if we have 3 rows and 4 columns our content goes in the direction
+1 4 7 10 
+2 5 8 11
+3 6 9  12
+```
+```
+grid-auto-flow: column dense; or row dense
+- if there is a empty space before present not at last but at start then it will fill that with our next element or item in which we have put content.
+```
+## grid-auto-columns and grid-auto-rows
+- in this eg. if we make 2 rows and 4 colums and they are = 8 cells and if we have eight elements they fit perfectly their but what if in emergency we have to fit their another some content like another 6 what we do now we type easily in our html file our content then it trys to fit in that grid but our ,main 8 cells are alrady their AND they wont change their size and they are fit their then to maintain these new 6 cells size we use like if we have grid-auto-flow:columns;then use this```grid-auto-columns:200px```that make the new cells width 200px or if we have grid-auto-flow:rows; then use ```grid-auto-rows:300px```make the new 6 cells height 300px 
+## auto-fill and auto-fit
+eg.
+```
+grid-template-column:repeat(auto-fill, 300px)
+```
+- means we tell the browser that we need 300px cell and how many you can fit equally fill according to our width and height that we give the grid or container and in this we dont need to make our website responsive when our screen shrinks means width and height gets change and we use grid auto fill so it auto-fill cells accoding to that width and height equally.
+- in auto-fill in their if one cell is missing then it keep it empty but in auto-fit it keep the cell collapse and make our other cells big to get that empty space other wise it do the same thing that auto-fill do so auto-fit is more use full.
 
 
 
