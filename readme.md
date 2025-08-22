@@ -2519,6 +2519,64 @@ eg for mobile.
 ### desktop first and mobile first
 - in desktop ist we make website for dektop then we resize it with @media query to make for mobile. 
 - mobile first we make website for mobile then we resize it with @media query to make it for desktop.
+### chapter 21 grid
+## enabling css grid
+- to enable grid we use just ```diaplay:grid;```
+or ```display:inline-grid;``` to also make it inline we use it like flex we apply it to parent then it applies on childs.
+## gris columns
+- to make columns in grid we use``` grid-template-columns: 1fr 1fr 1fr 1fr;``` 1fr means 1 fraction we can also increases columns width by feactions we can write ``` 1fr 2fr 1fr``` that means 2nd column shouls have 2 fractions.
+## grid rows
+- to make rows in grid we use ```grid-template-rows: 1fr 3fr 1fr ;``` .
+in here the middle one row's height is 3 times the other rows we make here 3 rows only .
+*we can also use px % rem etc etc in place of fr*
+## grid shorthand 
+- use all in once 
+![grid-shorthand](images/gridshortend.png)
+## minmax
+- we can control shrinkage of width and height eg.
+```
+grid-template-columns: minmax(100px, 1fr) minmax(300px, 2fr);
+    grid-template-rows: minmax(1fr, 2fr) minmax(200px, 2fr) minmax(2fr, 3fr);
+```
+- here we says in columns that for ist column width is 1fr but if screen shrinks the width will shrink till 100px not more than that.
+- in 2nd column we are saying that the width is 2fr but if screen shrinks it will shrink till 300px not more than that.
+- in rows we make 3 rows here and in ist row we say that the height of ist row is 2fr if it shrinks it will shrink only till 1fr not more than that.
+- in 2nd row we say that the height of 2nd row is 2fr if it shrinks it will shrink only till 200px not more than that.
+- in 3rd row we say that the height of 3rd row is 3fr if it shrinks it will shrink only till 2fr not more than that.
+**and note we write less width or height 1st then more otherwise it didnt work**
+we also write like this ```minmax(300px, auto)``` means minimum is 300px and maximum is how much the content is.
+## repeat
+```
+ grid-template-columns: repeat(4, 1fr);
+```
+- it means repeat 4 times 1fr columns that is equal to (1fr, 1fr, 1fr, 1fr)
+or we can use it in minmax also eg.
+```
+ grid-template-columns: repeat(3, minmax(100px, 1fr));
+    grid-template-rows: repeat(5, minmax(100px, 1fr));
+```
+## fit-content
+```
+ grid-template-columns:  fit-content(300px) fit-content(500px) ;
+```
+- here we make 2 columns and says that make the width that much in which conntent is fit and dont go upto 300px in ist one and dont go upto 500px in second one same in rows also.
+## grid gaps
+```
+column-gap: 16px;
+    row-gap: 12px;
+```
+- to make gaps we can also use in shorthand means at once eg.
+```
+grid-gap:20px;
+```
+- means 20px in rows and columns.
+or 
+```
+gap: 20px        30px;
+    rows gap     column gap
+```
+
+
 
 
 
