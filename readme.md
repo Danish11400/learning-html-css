@@ -1810,7 +1810,7 @@ div{
 ```
 ### note 100% is normal means if greyscaleis 100% means normal grey and 100% contrast means above than 100% is we increase and less than 100% is we decreasing 
 
-## heu-rotate
+## hue-rotate
 ```
    filter:hue-rotate(180deg);[ means it converts the image in negative more degree till 180 degree it increses towards normal to negative and then after increasing after 180 degree it means it going from negative to normal like 180 is full negative and 0 and 360 is normal]
 ```
@@ -2002,7 +2002,7 @@ a:hover{
 ```
 - look here how many transations i add in this ..
 ## timing-function
-- in this we canm add speed eg.
+- in this we can add speed eg.
 if we type```ease-out``` it starts quickly and slows down
 if we type ```ease-in```it starts slowlu and speeds up
 if we type ```linear```it moves in constant speed eg.
