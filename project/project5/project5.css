@@ -17,25 +17,27 @@ body{
      height: 20px;
 }
 .navbar .name{
-    width: 50%;
+   
     display: flex;
+    align-items: center;
     flex-direction: row;
    
 }
 .navbar .name .btn-wraper{
     background-color: whitesmoke;
-    width: 10%;
-    height: 30px;
-    display: flex;
-    justify-content: center;
     border-radius: 15px;
     box-shadow: 0 0 16px 6px rgba(0,0,0,0.1);
-    margin-left: 15px;
+    padding: 4px 14px;
+    display: flex;
+    align-items: center;
+    margin-top: -16px;
+    margin-left: 4px;
 }
 .name .btn{
-      padding-top: 14px;
-      align-self: center;
      
+      margin: 0;
+    padding: 0;
+    position: static;
 }
 .navbar p{
     margin-top: 0px;
@@ -49,6 +51,18 @@ body{
     width: 25%;
     display: flex;
     justify-content: space-around;
+}
+.lines{
+    width: 50px;
+    height: 50px;
+    display: none;
+}
+.icon{
+    height: 5px;
+    width: 36px;
+    background-color: black;
+    margin: 3px;
+    border-radius: 15px;
 }
 .navbar .links img{
    transition: transform 1s ;
@@ -136,7 +150,7 @@ footer{
     font-size: 30px;
     font-style: italic;
 }
-@media only screen and (max-width:768px) and (min-width:481px){
+@media only screen and (max-width:768px){
    .img-wrapper{
     grid-template-columns: repeat(2 1fr);
    grid-template-areas: 
@@ -159,23 +173,75 @@ footer{
     text-align: center;
    }
    .navbar{
-    max-width: 768px;
-    min-width: 481px;
     display: flex;
-    justify-content: space-between;
+    justify-content:flex-start;
+    gap: 10px;
    }
-   .navbar .name {
-    width: 50%;
-    display: flex;
-    flex-direction: row;
-     justify-content: space-around;
-   }
-   .navbar .name .pat{
-    font-size: 20px;
+   .navbar .name{
+    width: 100%;
+       display: flex;
+       justify-content: space-around;
    }
    .navbar .links{
-    width: 50%;
+    width: 100%;
     display: flex;
     justify-content: space-around;
    }
+   body{
+    padding: 10px;
+    margin: 4px;
+   }
+   
 } 
+@media only screen and (max-width: 485px) {
+  .navbar .links .tip{
+    display: none;
+  }
+  .navbar .lines {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* justify-content: flex-end; */
+    position: absolute;
+    right: 4px;
+  }
+  .navbar .name{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    white-space: nowrap;
+  }
+  footer{
+    font-size: 15px;
+    max-width: 480px;
+    margin-left: -35px;
+  }
+  .img-wrapper{
+    margin-top: 100px;
+    grid-template-columns: 1fr;
+   grid-template-areas: 
+   "a"
+   " b"
+   " c"
+   " d"
+   " e"
+   "f"
+   " g"
+   "h"
+   "i"
+} 
+  .navbar{
+    padding: 16px 24px;
+    margin-bottom: 16px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 3;
+    box-sizing: border-box;
+
+  }
+  body{
+    margin-top: 0px;
+  }
+}
