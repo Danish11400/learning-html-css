@@ -245,3 +245,36 @@ footer{
     margin-top: 0px;
   }
 }
+.upper{
+   animation: spin1 1s  ease-in-out forwards ;
+}
+.middle{
+    animation: invisible 1s  ease-in-out forwards ;
+}
+.down{
+   animation: spin2 1s  ease-in-out forwards ;
+}
+@keyframes spin1{
+  from{
+    transform: rotate(0deg) ;
+  }
+  to{
+    transform: rotate(45deg) translateX(2.5px) translateY(12px);
+  }
+}
+@keyframes invisible{
+  from{
+    transform: scale(1);
+  }
+  to{
+    transform: scale(0);
+  }
+}
+@keyframes spin2{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(-45deg) translateX(3.6px) translateY(-12px);
+  }
+}
