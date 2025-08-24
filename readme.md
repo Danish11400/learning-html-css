@@ -2845,11 +2845,9 @@ or
     }
 }
 ```
-- we can use percentages or rems or ems in place of pixels or we can use traslateX,translateY, z in same line according to our choice what we need so we can use any thing here just put name in upper side and duration and we can add delay their also and this can be done in just one line eg
-```
-animation: name duration delay 
-```
-we can go with many properties in one line as we can eg.
+- we can use percentages or rems or ems in place of pixels or we can use traslateX,translateY, z in same line according to our choice what we need so we can use any thing here just put name in upper side and duration and we can add delay their also and this can be done in just one line eg. 
+
+- we can go with many properties in one line as we can eg.
 ```
 .box{
     width: 300px;
@@ -2950,6 +2948,44 @@ animation-iteration-count:5;
 ## animation-timing-function
 *ease-out,ease-in,ease-in-out,linear etc etc*
 - browsers default is ease-out
+## animation shorthand property
+- **animation: duration easing-function delay name iteration direction etc etc**
+- we can apply many animations on single element by using comma eg.
+**animation: duration easing-function delay name iteration direction,duration direction easing-function iteration delay name**
+## we can change the order of this shorthand as we seen on upper two lines
+## building a simple spinner animation(loader)
+```
+<div class="animate"></div>
+```
+```
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+.animate{
+    width: 300px;
+    height: 300px;
+    border: 7px solid rgb(212, 198, 198);
+    border-top-color: blue;
+    border-radius: 50%;
+    animation: spinner 4s ease-in-out infinite;
+}
+@keyframes spinner{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+```
+result
+[▶️ Watch the video](https://youtube.com/shorts/PBUATW8Ds34?feature=share)
+## creating a bit more complex loader
+
 
 
 
