@@ -2717,6 +2717,239 @@ grid-template-column:repeat(auto-fill, 300px)
 ```
 - means we tell the browser that we need 300px cell and how many you can fit equally fill according to our width and height that we give the grid or container and in this we dont need to make our website responsive when our screen shrinks means width and height gets change and we use grid auto fill so it auto-fill cells accoding to that width and height equally.
 - in auto-fill in their if one cell is missing then it keep it empty but in auto-fit it keep the cell collapse and make our other cells big to get that empty space other wise it do the same thing that auto-fill do so auto-fit is more use full.
+### chapter23-building animations
+## keyframe animations
+- in @keyframes we have "from" and "to" we apply these when have start point and end point of animation eg.
+```
+<body>
+    <div class="box">Animate Me</div>
+</body>
+```
+```
+.box{
+    width: 300px;
+    height: 300px;
+    background-color: white;
+    color: black;
+    font-size: 2rem;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    border: 1px solid green;
+    animation-name: colorchange;
+    animation-duration: 5s;
+}
+@keyframes colorchange{
+      from{
+        background-color: aqua;
+      }
+      to{
+        background-color: orchid;
+      }
+}
+```
+or
+```
+.box{
+    width: 300px;
+    height: 300px;
+    background-color: white;
+    color: black;
+    font-size: 2rem;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    border: 1px solid green;
+    animation-name: spin;
+    animation-duration: 5s;
+}
+@keyframes spin{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+ }
+```
+**and remember we can change the names like spin and colorchange etc etc we can change them according to our choice**
+- we also have percentage in @keyframes eg.
+```
+.box{
+    width: 300px;
+    height: 300px;
+    background-color: white;
+    color: black;
+    font-size: 2rem;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    border: 1px solid green;
+    animation-name: hello;
+    animation-duration: 6s;
+}
+ @keyframes hello{
+    0%{
+        background-color: black;
+    }
+    30%{
+        background-color: blueviolet;
+    }
+    70%{
+        background-color: yellow;
+    }
+    90%{
+        background-color: olive;
+    }
+    100%{
+        background-color: chartreuse;
+    }
+ }
+```
+- another example.
+```
+.box{
+    width: 300px;
+    height: 300px;
+    background-color: white;
+    color: black;
+    font-size: 2rem;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    border: 1px solid green;
+    animation-name: spin;
+    animation-duration: 5s;
+    animation-name: hellobuddy;
+    animation-duration: 10s;
+}
+@keyframes hellobuddy{
+    0%{
+        transform: translateX(0);
+    }
+    20%{
+        transform: translateX(500px);
+    }
+    60%{
+        transform: translateX(300px);
+    }
+    80%{
+        transform: translateX(700px);
+    }
+    100%{
+        transform: translateX(200px);
+    }
+}
+```
+- we can use percentages or rems or ems in place of pixels or we can use traslateX,translateY, z in same line according to our choice what we need so we can use any thing here just put name in upper side and duration and we can add delay their also and this can be done in just one line eg
+```
+animation: name duration delay 
+```
+we can go with many properties in one line as we can eg.
+```
+.box{
+    width: 300px;
+    height: 300px;
+    background-color: white;
+    color: black;
+    font-size: 2rem;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    border: 1px solid green;
+    animation-name: spin;
+    animation-duration: 5s;
+    animation-name: hellobuddy;
+    animation-duration: 20s;
+}
+@keyframes hellobuddy{
+    0%{
+        transform: translateX(0);
+        background-color: black;
+        color: white;
+        text-decoration: underline;
+        font-size: 20px;
+        font-weight: bold;
+        font-style: italic;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    20%{
+        transform: translateX(500px);
+        background-color:gree;
+        color: yellow;
+        text-decoration:overline;
+        font-size: 2em;
+        font-weight: bolder;
+        font-style:oblique;
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    60%{
+        transform: translateY(300px);
+        background-color:red;
+        color:black;
+        text-decoration:dotted;
+        font-size: 3rem;
+        font-weight: normal;
+        font-style: italic;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        border: 3px solid black;
+        border-radius: 20px;
+    }
+    80%{
+        transform: translateZ(700px);
+        background-color:olive;
+        color:orchid;
+        text-decoration: wavy;
+        font-size: 20px;
+        font-weight: bolder;
+        font-style: italic;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+    100%{
+        transform: rotateX(180deg);
+         background-color:teal;
+        color:magenta;
+        text-decoration:line-through;
+        font-size: 3rem;
+        font-weight: bolder;
+        font-style: italic;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+}
+```
+## animation-iteration-count
+- means how many times animation run before stoping default browser is 1 but we can set it like
+```
+animation-iteration-count:5;
+```
+*{we can set it infinite to keep going never stops}*
+## animation-direction
+- we can control our animation-direction our animation starts from 0% to 100% or from 100% to 0% from animation-direction
+```
+ animation-direction: reverse;[ here it goes from 100% to 0% direction]
+```
+
+**we can use alternate also in alternate it goes in ist cycle from 0% to 100%**
+**then in 2nd cycle it goed from 100% to 0%**
+
+```
+ animation-direction: alternate;
+```
+```
+ animation-direction: alternate-reverse;
+```
+**we can use alternate-reverse also in alternate-reverse it goes in ist cycle from 100% to 0%**
+**then in 2nd cycle it goed from 0% to 100%**
+## animation-delay
+- as we know in traslation it delays 
+## animation-timing-function
+*ease-out,ease-in,ease-in-out,linear etc etc*
+- browsers default is ease-out
 
 
 
