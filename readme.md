@@ -2984,7 +2984,14 @@ body{
 ```
 result
 [▶️ Watch the video](https://youtube.com/shorts/PBUATW8Ds34?feature=share)
-## creating a bit more complex loader
+## animation-fill-mode
+- we know after animation completes the cycle it goes back in the origin styles which looks very bad but we can make animation stay in last part i mean at 100% of the cycle by 
+```
+animation-fill-mode:forwards;
+```
+
+
+
 
 
 
