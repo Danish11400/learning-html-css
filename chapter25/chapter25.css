@@ -1,0 +1,12 @@
+:root{
+    --top-color:magenta;
+}
+h1{
+    color:var(--top-color);
+}
+div{
+    border: 4px solid var(--top-color);
+}
+button{
+    background-color: var(--top-color);
+}

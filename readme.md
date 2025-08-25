@@ -3142,6 +3142,61 @@ position: relative;
  }
 ```
 - look how easily we done this here
+### chapter 25 modern css
+```
+<div>
+        <h1>hello world</h1>
+        <button>click me</button>
+    </div>
+```
+```
+h1{
+    color: olive;
+}
+div{
+    border: 4px solid olive;
+}
+button{
+    background-color: olive;
+}
+```
+- look in modern website there are in tons of code and if we have to change anything we cant change them one by one we use some short cut so here we use css variables eg.
+```
+:root{
+    --top-color:olive;
+}
+h1{
+    color:var(--top-color);
+}
+div{
+    border: 4px solid var(--top-color);
+}
+button{
+    background-color: var(--top-color);
+}
+```
+- look here we make a color we keep its name top-color we have to put two dash before we keep a name then where we have to put the same color we put the name inside that with var(--top-color) now if we have to change the color we can change in :rooot no one by one it will change once in all 
+- like here we do it with color but we can do anything with it trasnistion,transformation,animation,background,
+text-decoratin,font-size etc etc etc i mean every thing
+## in media query
+- if we have to change the styles what we do if we have root already present then we can do like 
+```
+@media only screen and (max-width:800px){
+    :root{
+    --top-color:purple;
+}
+}
+```
+-then we can add that colour where we want to.
+### introducing calc()
+we can use calculations in this eg ```padding:calc(100%-43px);```
+- here when ever width changes eg. we shrink the screen its padding remains same because we make padding from 100% width.
+- we can use +,-,*,/ in calc also.
+we can use calc() anyways eg.
+```width:calc(calc(50% -200px)*2)```
+```height:calc(30%-30px *2px /1px)``` we can use many in one.
+
+
 
 
 
