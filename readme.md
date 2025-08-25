@@ -3195,6 +3195,7 @@ we can use calculations in this eg ```padding:calc(100%-43px);```
 we can use calc() anyways eg.
 ```width:calc(calc(50% -200px)*2)```
 ```height:calc(30%-30px *2px /1px)``` we can use many in one.
+### AND AT THIS POINT I FINISH MY HTML AND CSS COURSE ALHAMDULILLAH
 
 
 
