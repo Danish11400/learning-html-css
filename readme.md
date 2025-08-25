@@ -48,7 +48,7 @@ text
 ```<button type="button">Press Me</button>```
 But lastly, he told us we don’t need to write the (type) attribute in the button tag — it’s not important.
 
-Topic 2 – The Form Element
+## Topic 2 – The Form Element
 We learned about the form element. The form element sends our data somewhere.
 Example:
 
@@ -152,9 +152,8 @@ text
 Clicking the label toggles the checkbox.
 
 Topic 7 – Select and Radio Button
-Select Dropdown
+# Select Dropdown
 
-text
 ```<select name="options">```
    ```<option value="opt1">Option 1</option>```
    ```<option value="opt2">Option 2</option>```
@@ -162,9 +161,8 @@ text
 ```</select>```
 The value in each ```<option>``` is what gets sent when the form is submitted.
 
-Radio Buttons
+# Radio Buttons
 
-text
 ```<input type="radio" name="choice" value="A">```
 ```<input type="radio" name="choice" value="B"> ```
 Radio buttons allow selecting only one option per name group.
@@ -2989,6 +2987,161 @@ result
 ```
 animation-fill-mode:forwards;
 ```
+### chapter 24 before and after pseudo elements
+![before&after](images/before&after.png)
+```::before```
+- we can add something to any element or class or id eg.
+```<h1>i am danish nisar</h1>```
+```
+h1::before{
+  content: "hello";
+}
+```
+- it will add hello before my h1
+```::after```
+- we can add something to any element or class or id eg.
+```<h1>i am danish nisar</h1>```
+```
+h1::after{
+  content: "kumar";
+}
+```
+- it will add kumar after my h1
+- we can add styles also it eg.
+```
+h1::before{
+  content: "hello";
+  background-color:blue;
+  text-decoration:underline;
+  font-size:2rem;
+  color:yellow;
+}
+```
+- same in after
+## why we use befoe and after
+- we use them only for styling like quotetion marks not for main content eg.
+```
+<blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, rerum animi dicta quaerat, corrupti eius aliquam consectetur rem, harum quae eos ducimus! Ipsam, incidunt rem unde consequuntur laudantium porro reiciendis!</blockquote>
+```
+```
+h1::after{
+  content: " kumar";
+}
+blockquote::before{
+  content:open-quote;
+}
+blockquote::after{
+    content: close-quote;
+}
+```
+- it will add quotation mark before and after and then we can style the quotetion marks also.
+## using for gradient borders
+eg.
+```
+<div class="box">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt assumenda culpa, repudiandae nostrum nihil debitis iste ad iusto omnis magni facere nemo dolorum, natus provident, odio consectetur est quis fuga!
+    </div>
+```
+```
+ body{
+    background-color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ .box{
+    color: white;
+    font-size: 1.5rem;
+    height: 300px;
+    width: 300px;
+    border: 3px solid white;
+display: flex;
+justify-content: center;
+align-items: center;
+ }
+```
+- look here we can make only one color borring border but what if we want a decorative border then we use before and after eg.
+```
+ <div class="box">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt assumenda culpa, repudiandae nostrum nihil debitis iste ad iusto omnis magni facere nemo dolorum, natus provident, odio consectetur est quis fuga!
+        <div class="decorative-border"></div>
+    </div>
+```
+```
+ body{
+    background-color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ .box{
+    background-color: black;
+    color: white;
+    height: 300px;
+    width: 300px;
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+ }
+ .decorative-border{
+    height: 306px;
+    width: 306px;
+    background:linear-gradient(cyan, magenta);
+   position: absolute;
+   top: -3px;
+   left: -3px;
+   z-index: -1;
+ }
+```
+- here we write 306px is due to we need 3 px border on each side.
+- and 300px is width and height that does inside the .box and remaining 3 px on each side.
+![result-of-decorative-border](images/Screenshot%202025-08-25%20094722.png)
+**but we can make it simpler with pseudo before and after eg**
+```
+height: 306px;
+    width: 306px;
+    background:linear-gradient(cyan, magenta);
+   position: absolute;
+   top: -3px;
+   left: -3px;
+   z-index: -1;
+```
+```
+ body{
+    background-color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ .box{
+    background-color: black;
+    color: white;
+    height: 300px;
+    width: 300px;
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+ }
+ .box::before{
+    content: "";
+    height: 306px;
+    width: 306px;
+    background:linear-gradient(cyan, magenta);
+   position: absolute;
+   top: -3px;
+   left: -3px;
+   z-index: -1;
+ }
+```
+- look how easily we done this here
 
 
 
